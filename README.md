@@ -10,8 +10,3 @@
 ## About OASIS
 OASIS AGRO ENTERPRISE brings you the opportunity to be an Oasis investor by investing in our cassava farm project for 2022 Business/farming cycle
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# oasis" 
