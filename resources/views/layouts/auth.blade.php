@@ -27,7 +27,7 @@
 <div class="app">
     <div class="authentication">
         <div class="sign-in-2">
-            <div class="container-fluid no-pdd-horizon bg" style="background-image: url('assets/images/others/img-30.jpg')">
+            <div class="container-fluid no-pdd-horizon bg" style="background-image: url({{ asset('assets/images/others/img-30.jpg') }})">
                 <div class="row">
                     <div class="col-md-10 mr-auto ml-auto">
                         <div class="row">

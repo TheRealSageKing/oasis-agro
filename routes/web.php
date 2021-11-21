@@ -1,6 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Client\PortfolioController;
+use App\Http\Controllers\Client\AccountController;
+use App\Http\Controllers\Client\InvestmentController;
+use App\Http\Controllers\Client\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +34,14 @@ Route::get('/contact-us', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('client.index');
+Route::get('/oasis-admin', [HomeController::class, 'administrator'])->name('admin.index');
+
+//Client
+Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function(){
+    Route::get('/my-portfolio', [PortfolioController::class, 'index'])->name('client.portfolio.index');
+    Route::get('/payments', [PaymentController::class, 'index'])->name('client.payments.index');
+    Route::get('/invest', [InvestmentController::class, 'index'])->name('client.investments.index');
+    Route::get('/my-account', [AccountController::class, 'index'])->name('client.account.index');
+    Route::get('/logout', [AccountController::class, 'logout'])->name('client.account.logout');
+});

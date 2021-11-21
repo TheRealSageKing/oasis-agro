@@ -32,9 +32,8 @@
         <div class="side-nav">
             <div class="side-nav-inner">
                 <div class="side-nav-logo">
-                    <a href="{{ route('base') }}">
-                        <div class="logo logo-dark" style="background-image: url('assets/images/logo/logo.png')"></div>
-                        <div class="logo logo-white" style="background-image: url('assets/images/logo/logo-white.png')"></div>
+                    <a href="{{ url('/dashboard') }}">
+                        <div class="logo logo-dark" style="background-image: url({{asset('assets/images/logo/logo.png')}})"></div>
                     </a>
                     <div class="mobile-toggle side-nav-toggle">
                         <a href="#">
@@ -43,7 +42,7 @@
                     </div>
                 </div>
                 <ul class="side-nav-menu scrollable">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="mrg-top-30" href="index.html">
                                 <span class="icon-holder">
 										<i class="ti-home"></i>
@@ -51,12 +50,12 @@
                             <span class="title">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a href="index.html">
                             <span class="icon-holder">
                                 <i class="ti-package"></i>
                             </span>
-                            <span class="title">Portfolio</span>
+                            <span class="title">Packages</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -64,7 +63,15 @@
                                 <span class="icon-holder">
 										<i class="ti-palette"></i>
 									</span>
-                            <span class="title">Invest</span>
+                            <span class="title">Investments</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0);">
+                                <span class="icon-holder">
+										<i class="ei-smiley"></i>
+									</span>
+                            <span class="title">Customers</span>
                         </a>
                     </li>
                     <li class="nav-item">

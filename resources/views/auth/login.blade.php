@@ -3,7 +3,9 @@
 @section('title', 'Log In')
 @section('content')
 
-    <p class="mrg-btm-15 font-size-13">Please enter your user name and password to login</p>
+    <p class="mrg-btm-15 font-size-13">Dont have an account? <a href="{{ route('register') }}">
+            {{ __('Create Account') }}
+        </a></p>
 
     <form method="POST" action="{{ route('login') }}">
                                                     @csrf

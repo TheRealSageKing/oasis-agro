@@ -33,8 +33,7 @@
             <div class="side-nav-inner">
                 <div class="side-nav-logo">
                     <a href="{{ route('base') }}">
-                        <div class="logo logo-dark" style="background-image: url('assets/images/logo/logo.png')"></div>
-                        <div class="logo logo-white" style="background-image: url('assets/images/logo/logo-white.png')"></div>
+                        <div class="logo logo-dark" style="background-image: url({{ asset('assets/images/logo/logo.png') }})"></div>
                     </a>
                     <div class="mobile-toggle side-nav-toggle">
                         <a href="#">
@@ -43,61 +42,57 @@
                     </div>
                 </div>
                 <ul class="side-nav-menu scrollable">
-                    <li class="nav-item active">
-                        <a class="mrg-top-30" href="index.html">
+                    <li class="nav-item {{ (request()->is('dashboard')) ? 'active' : '' }}">
+                        <a class="mrg-top-30" href="{{ route('client.index') }}">
                                 <span class="icon-holder">
 										<i class="ti-home"></i>
 									</span>
                             <span class="title">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="index.html">
+                    <li class="nav-item {{ (request()->is('dashboard/my-portfolio')) ? 'active' : '' }}">
+                        <a href="{{ route('client.portfolio.index') }}">
                             <span class="icon-holder">
                                 <i class="ti-package"></i>
                             </span>
-                            <span class="title">Packages</span>
+                            <span class="title">Portfolio</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0);">
+                    <li class="nav-item {{ (request()->is('dashboard/invest')) ? 'active' : '' }}">
+                        <a href="{{ route('client.investments.index') }}">
                                 <span class="icon-holder">
 										<i class="ti-palette"></i>
 									</span>
-                            <span class="title">Investments</span>
+                            <span class="title">Invest</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0);">
-                                <span class="icon-holder">
-										<i class="ei-smiley"></i>
-									</span>
-                            <span class="title">Customers</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html">
+                    <li class="nav-item {{ (request()->is('dashboard/payments')) ? 'active' : '' }}">
+                        <a href="{{ route('client.payments.index') }}">
                             <span class="icon-holder">
                                 <i class="ti-file"></i>
                             </span>
                             <span class="title">Payments</span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="index.html">
+                    <li class="nav-item  {{ (request()->is('dashboard/my-account')) ? 'active' : '' }}">
+                        <a href="{{ route('client.account.index') }}">
                             <span class="icon-holder">
                                 <i class="ti-layout-media-overlay"></i>
                             </span>
                             <span class="title">Account</span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="index.html">
+                    <li class="nav-item">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                             <span class="icon-holder">
                                 <i class="ei-log-in-alt"></i>
                             </span>
                             <span class="title">Logout</span>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -119,7 +114,7 @@
                     <ul class="nav-right">
                         <li class="user-profile dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img class="profile-img img-fluid" src="assets/images/user.jpg" alt="">
+                                <img class="profile-img img-fluid" src="{{ asset('assets/images/user.jpg') }}" alt="">
                                 <div class="user-info">
                                     <span class="name pdd-right-5">{{ Auth::user()->name }}</span>
                                     <i class="ti-angle-down font-size-10"></i>
