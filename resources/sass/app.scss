@@ -6,3 +6,11 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+//toastr
+@import "~toastr/toastr";
+
+.toast-message {
+    font-size: 15px !Important;
+    font-family: 'Poppins', sans-serif;
+}

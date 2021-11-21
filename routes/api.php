@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group([], function(){
+   Route::post('/contact-us', [\App\Http\Controllers\PageController::class, 'submit_contact_us'])->name('submit-contact-us');
+});

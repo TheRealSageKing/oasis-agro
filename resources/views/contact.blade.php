@@ -36,7 +36,8 @@
                 <!--CONTACT FORM START-->
                 <div class="col-lg-6 space-break">
                     <div class="contact-form">
-                        <form id="contact-form" method="post" action="http://quickdevs.com/templates/agrom/contact.php">
+                        <form id="dope-contact-form" method="post">
+                            @csrf
                             <div class="messages"></div>
                             <div class="controls">
                                 <div class="row">
@@ -54,7 +55,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input id="form_phone" type="tel" name="phone" class="form-control customize" placeholder="Please enter your phone">
+                                            <input id="form_phone" type="tel" name="phone_number" class="form-control customize" placeholder="Please enter your phone">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -67,7 +68,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <p><input type="submit" class="btn btn-custom" value="Send message"></p>
+                                        <p><button type="submit" class="btn btn-custom" id="submit-btn">Send message</button></p>
                                     </div>
                                 </div>
                             </div>
@@ -87,5 +88,41 @@
     </section>
 
 
+@endsection
 
+@section('scripts')
+    <script type="text/javascript">
+        $(document).on('submit', '#dope-contact-form', function(e){
+            e.preventDefault();
+
+            let form = $(this);
+            let data = form.serialize();
+            let submitBtn = $('#submit-btn');
+            let oldVal = submitBtn.html();
+
+            submitBtn.html("<span class='fa fa-spin fa-spinner'></span> Sending Message...").prop('disabled', true);
+            $.ajax({
+                url:'{{route('submit-contact-us')}}',
+                data:data,
+                type: 'POST',
+                success: function(data){
+                    if (data.success)
+                    {
+                        toastr.success('Thank you for writing to us we will get back to you as soon as possible');
+                        document.getElementById("dope-contact-form").reset();
+                    }else{
+                        toastr.error(data.message);
+                    }
+
+                    submitBtn.html(oldVal).prop('disabled', false);
+                },
+                error: function(err)
+                {
+                    let response = JSON.parse(err.responseText);
+                    toastr.error(response.message);
+                    submitBtn.html(oldVal).prop('disabled', false);
+                }
+            })
+        });
+    </script>
 @endsection

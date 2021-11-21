@@ -22,7 +22,8 @@
     <!-- ==============================================
     CSS
     =============================================== -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('css/timeline.css') }}">
     <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home-4-styles.css') }}">
@@ -33,6 +34,7 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href='{{ asset('css/animation.aos.min.css') }}'>
     <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+
     <script src="{{ asset('js/modernizr-custom.js') }}"></script>
 
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
@@ -146,16 +148,16 @@
 <!-- ==============================================
 JAVASCRIPTS
 =============================================== -->
+<script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ asset('js/plugins.js') }}"></script>
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{{--<script src="{{ asset('js/bootstrap.min.js') }}"></script>--}}
 <script src="{{ asset('js/agrom.js') }}"></script>
 <script src="{{ asset('js/util.js') }}"></script>
 <script src="{{ asset('js/swipe-content.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
 
-<script>
 
-</script>
+@yield('scripts')
 
 </body>
 </html>
