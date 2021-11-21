@@ -64,7 +64,7 @@
     <div class="main-nav">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index-2.html"><div class="logo-brand"><img src="" alt=""></div></a>
+                <a class="navbar-brand" href="{{ route('base') }}"><div class="logo-brand"><img src="{{ asset('img/master/logo.png') }}" alt=""></div></a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar top-bar"></span>
                     <span class="icon-bar middle-bar"></span>
