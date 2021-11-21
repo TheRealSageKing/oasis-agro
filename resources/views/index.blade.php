@@ -10,11 +10,13 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="home-about">
-                            <h5>Grow Naturally</h5>
-                            <h2>Leaders In The Field</h2>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                            <p>Search for 'lorem ipsum' will uncover many web sites still in their infancy, uncover many web sites still in their infancy.</p>
-                            <div class="btn-more-box"><a class="btn-hover-corner" href="#">LEARN MORE</a></div>
+                            <h5>Oasis Agro Enterprise</h5>
+                            <h2>Our Mission</h2>
+                            <p>Our mission is to actively contribute to the sustainable development of food production in
+                                Imo state Nigeria, reducing food import and increasing production and export of food from
+                                Eastern Nigeria to other parts of the country and the World While engaging Nigerian Youths
+                                actively in Embracing agriculture as a Golden opportunity in the fight against poverty in Africa</p>
+                            <div class="btn-more-box"><a class="btn-hover-corner" href="{{ url('about-us#mission') }}">LEARN MORE</a></div>
                         </div>
                     </div>
                     <div class="col-lg-6 space-break">

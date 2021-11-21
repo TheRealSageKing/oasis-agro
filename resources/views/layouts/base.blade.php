@@ -64,7 +64,7 @@
     <div class="main-nav">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="{{ route('base') }}"><div class="logo-brand"><img src="{{ asset('img/master/logo.png') }}" alt=""></div></a>
+                <a class="navbar-brand" href="{{ url('/') }}"><div class="logo-brand"><img src="{{ asset('img/master/logo.png') }}" alt=""></div></a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar top-bar"></span>
                     <span class="icon-bar middle-bar"></span>
@@ -73,7 +73,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href=" {{ route('base') }}" >HOME</a>
+                            <a class="nav-link" href=" {{ url('/') }}" >HOME</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('about') }}">ABOUT</a>
@@ -93,7 +93,7 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">MY ACCOUNT</a>
+                                <a class="nav-link" href="{{ url('dashboard') }}">MY ACCOUNT</a>
                             </li>
                         @endguest
                     </ul>

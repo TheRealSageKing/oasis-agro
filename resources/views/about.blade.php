@@ -13,11 +13,10 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-front">
-                        <h5>Grow Naturally</h5>
-                        <h2>Redefining Agri Living</h2>
+                        <h5>About oasis agro enterprise</h5>
+                        <h2>Who are we?</h2>
                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, making this the first true generator on the Internet. It uses a dictionary.</p>
                         <p>Generators on the Internet tend to repeat predefined chunks as necessary.</p>
-                        <div class="btn-more-box"><a class="btn-hover-corner" href="#">LEARN MORE</a></div>
                     </div>
                 </div>
                 <div class="col-lg-6 space-break">
@@ -154,7 +153,7 @@
                         <figure class="mission-thumb"><img src="img/images/img2.jpg" alt=""></figure>
                         <div class="caption">
                             <h3>Our Mission</h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable.</p>
+                            <p>Our mission is to actively contribute to the sustainable development of food production in Nigeria, reducing food import and maximizing production and export</p>
                         </div>
                     </div>
                 </div>
