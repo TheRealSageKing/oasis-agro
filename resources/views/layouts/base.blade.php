@@ -109,8 +109,8 @@
         <div class="row">
             <div class="col-lg-5">
                 <div class="footer-col">
-                    <a href="index-2.html">
-                        <figure class="footer-logo"><img src="img/master/logo-2.png" alt=""></figure>
+                    <a href="{{ url('/') }}">
+                        <figure class="footer-logo"><img src="{{asset('img/master/logo.png')}}" alt=""></figure>
                     </a>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                     <p class="copyright">© 2019 Agrom Organic & Agriculture Food HTML Template</p>
