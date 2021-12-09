@@ -20,4 +20,17 @@ class Controller extends BaseController
     {
         return response()->json(['data' => $data, 'message' => $message, 'success' => true], $status);
     }
+
+    public function uploadFile($file, $directory)
+    {
+        $fileName = time().'_'.$file->getClientOriginalName();
+        $filePath = $file->storeAs($directory, $fileName, 'public');
+        $file_path = '/storage/' . $filePath;
+
+        return array(
+            'name' => $fileName,
+            'ext' => '',
+            'path' => $file_path
+        );
+    }
 }

@@ -7,6 +7,13 @@ use App\Http\Controllers\Client\PortfolioController;
 use App\Http\Controllers\Client\AccountController;
 use App\Http\Controllers\Client\InvestmentController;
 use App\Http\Controllers\Client\PaymentController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Client\DashboardController as ClientController;
+use App\Http\Controllers\Admin\PackageController;
+use App\Http\Controllers\Admin\InvestmentController as AdminInvestmentController;
+use App\Http\Controllers\Admin\AccountController as AdminAccountController;
+use App\Http\Controllers\Admin\PaymentController as AdminPaymentController;
+use App\Http\Controllers\Admin\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,14 +41,45 @@ Route::get('/contact-us', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', [HomeController::class, 'index'])->name('client.index');
-Route::get('/oasis-admin', [HomeController::class, 'administrator'])->name('admin.index');
+Route::get('/dashboard', [ClientController::class, 'index'])->name('client.index')->middleware('role:Client');;
+Route::get('/oasis-admin/dashboard', [DashboardController::class, 'index'])->name('admin.index')->middleware('role:Administrator');;
+Route::get('/super/dashboard', [DashboardController::class, 'super'])->name('super.index')->middleware('role:Super Administrator');
 
 //Client
-Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function(){
+Route::group(['middleware' => ['auth', 'role:Client'], 'prefix' => 'dashboard'], function(){
     Route::get('/my-portfolio', [PortfolioController::class, 'index'])->name('client.portfolio.index');
     Route::get('/payments', [PaymentController::class, 'index'])->name('client.payments.index');
     Route::get('/invest', [InvestmentController::class, 'index'])->name('client.investments.index');
     Route::get('/my-account', [AccountController::class, 'index'])->name('client.account.index');
-    Route::get('/logout', [AccountController::class, 'logout'])->name('client.account.logout');
+
+    Route::get('/investment/create', [InvestmentController::class, 'create'])->name('client.investments.create');
+    Route::post('/investment/create', [InvestmentController::class, 'store'])->name('client.investments.store');
+    Route::post('/investment/cancel/{id}', [InvestmentController::class, 'cancel'])->name('client.investments.cancel');
+});
+
+//Administrator
+Route::group(['middleware' => ['auth', 'role:Administrator'], 'prefix' => 'oasis-admin'], function(){
+    Route::get('/packages', [PackageController::class, 'index'])->name('admin.packages.index');
+    Route::get('/packages/create', [PackageController::class, 'create'])->name('admin.packages.create');
+    Route::post('/packages/create', [PackageController::class, 'store'])->name('admin.packages.store');
+    Route::get('/packages/edit/{id}', [PackageController::class, 'edit'])->name('admin.packages.edit');
+    Route::post('/packages/edit/{id}', [PackageController::class, 'update'])->name('admin.packages.update');
+    Route::delete('/packages/delete/{id}', [PackageController::class, 'destroy'])->name('admin.packages.destroy');
+    Route::get('/packages/{id}', [PackageController::class, 'show'])->name('admin.packages.show');
+
+    Route::get('/investments', [AdminInvestmentController::class, 'index'])->name('admin.investments.index');
+    Route::get('/investments', [AdminInvestmentController::class, 'index'])->name('admin.investments.index');
+    Route::get('/investments/{id}', [AdminInvestmentController::class, 'show'])->name('admin.investments.show');
+
+    Route::get('/customers', [CustomerController::class, 'index'])->name('admin.customers.index');
+    Route::get('/customers/{id}', [CustomerController::class, 'show'])->name('admin.customers.show');
+
+    Route::get('/payments', [AdminPaymentController::class, 'index'])->name('admin.payments.index');
+    Route::get('/payments/request', [AdminPaymentController::class, 'create'])->name('admin.payments.requests');
+    Route::post('/payments/fulfilled', [AdminPaymentController::class, 'store'])->name('admin.payments.fulfilled');
+    Route::get('/payments/{id}', [AdminPaymentController::class, 'show'])->name('admin.payments.show');
+
+    Route::get('/my-account', [AdminAccountController::class, 'index'])->name('admin.account.index');
+    Route::post('/update', [AdminAccountController::class, 'update'])->name('admin.account.update');
+    Route::post('/update-password', [AdminAccountController::class, 'updatePassword'])->name('admin.account.update_password');
 });

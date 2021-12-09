@@ -4,10 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-
 window.toastr = require('toastr');
-
 window.toastr.options = {
     "closeButton": true,
     "debug": false,
@@ -27,6 +24,8 @@ window.toastr.options = {
 }
 
 // window.Vue = require('vue').default;
+
+
 
 /**
  * The following block of code may be used to automatically register your

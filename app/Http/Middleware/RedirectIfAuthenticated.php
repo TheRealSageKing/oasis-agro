@@ -23,7 +23,24 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+//                return redirect(RouteServiceProvider::HOME);
+                $role = strtolower(Auth::user()->getRole());
+
+                switch ($role) {
+                    case 'super administrator':
+                        return redirect('/super/dashboard');
+                        break;
+                    case 'administrator':
+                        return redirect('/oasis-admin/dashboard');
+                        break;
+                    case 'client':
+                        return redirect('/dashboard');
+                        break;
+
+                    default:
+                        return redirect('/');
+                        break;
+                }
             }
         }
 

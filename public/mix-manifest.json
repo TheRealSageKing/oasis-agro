@@ -1,4 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/assets/js/backend-plugins.js": "/assets/js/backend-plugins.js",
+    "/css/plugins.css": "/css/plugins.css",
+    "/css/app.css": "/css/app.css",
+    "/assets/css/backend-app.css": "/assets/css/backend-app.css",
+    "/assets/css/toastr.css": "/assets/css/toastr.css"
 }

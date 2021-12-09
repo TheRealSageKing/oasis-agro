@@ -22,7 +22,13 @@
     <link href="{{ asset('assets/css/themify-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/toastr.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/backend-app.css') }}" rel="stylesheet">
+
+
+
 </head>
 
 <body>
@@ -42,61 +48,65 @@
                     </div>
                 </div>
                 <ul class="side-nav-menu scrollable">
-                    <li class="nav-item">
-                        <a class="mrg-top-30" href="index.html">
+                    <li class="nav-item  {{ (request()->is('oasis-admin/dashboard')) ? 'active' : '' }}">
+                        <a class="mrg-top-30" href="{{ route('admin.index') }}">
                                 <span class="icon-holder">
 										<i class="ti-home"></i>
 									</span>
                             <span class="title">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a href="index.html">
+                    <li class="nav-item {{ (request()->is('oasis-admin/packages')) || (request()->is('oasis-admin/packages/*')) ? 'active' : '' }}">
+                        <a href="{{ route('admin.packages.index') }}">
                             <span class="icon-holder">
                                 <i class="ti-package"></i>
                             </span>
                             <span class="title">Packages</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0);">
+                    <li class="nav-item {{ (request()->is('oasis-admin/investments')) || (request()->is('oasis-admin/investments/*')) ? 'active' : '' }}">
+                        <a href="{{ route('admin.investments.index') }}">
                                 <span class="icon-holder">
 										<i class="ti-palette"></i>
 									</span>
                             <span class="title">Investments</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0);">
+                    <li class="nav-item {{ (request()->is('oasis-admin/customers')) || (request()->is('oasis-admin/customers/*')) ? 'active' : '' }}">
+                        <a href="{{ route('admin.customers.index') }}">
                                 <span class="icon-holder">
 										<i class="ei-smiley"></i>
 									</span>
                             <span class="title">Customers</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="index.html">
+                    <li class="nav-item {{ (request()->is('oasis-admin/payments')) || (request()->is('oasis-admin/payments/*')) ? 'active' : '' }}">
+                        <a href="{{ route('admin.payments.index') }}">
                             <span class="icon-holder">
                                 <i class="ti-file"></i>
                             </span>
                             <span class="title">Payments</span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="index.html">
+                    <li class="nav-item {{ (request()->is('oasis-admin/my-account')) ? 'active' : '' }}">
+                        <a href="{{ route('admin.account.index') }}">
                             <span class="icon-holder">
                                 <i class="ti-layout-media-overlay"></i>
                             </span>
                             <span class="title">Account</span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="index.html">
+                    <li class="nav-item">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                             <span class="icon-holder">
                                 <i class="ei-log-in-alt"></i>
                             </span>
                             <span class="title">Logout</span>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -118,9 +128,9 @@
                     <ul class="nav-right">
                         <li class="user-profile dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img class="profile-img img-fluid" src="assets/images/user.jpg" alt="">
+                                <img class="profile-img img-fluid" src="{{ asset('assets/images/user.jpg') }}" alt="">
                                 <div class="user-info">
-                                    <span class="name pdd-right-5">{{ Auth::user()->name }}</span>
+                                    <span class="name pdd-right-5">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
                                     <i class="ti-angle-down font-size-10"></i>
                                 </div>
                             </a>
@@ -162,6 +172,21 @@
                 <div class="container-fluid">
                     @yield('content')
                 </div>
+                <div class="modal slide-in-right modal-right fade" id="side-modal-r">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            @yield('side-modal-content')
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="default-modal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            @yield('modal-content')
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- Content Wrapper END -->
 
@@ -184,21 +209,21 @@
 
     </div>
 </div>
-``
-<script src="{{ asset('assets/js/vendor.js') }}"></script>
 
+
+{{--<script src="{{ asset('assets/js/vendor.js') }}"></script>--}}
+
+<script src="{{ mix('assets/js/backend-plugins.js') }}"></script>
+<script src="{{ mix('js/app.js') }}"></script>
 <!-- page plugins js -->
-<script src="{{ asset('assets/vendors/bower-jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
-<script src="{{ asset('assets/js/maps/jquery-jvectormap-us-aea.js') }}"></script>
-<script src="{{ asset('assets/vendors/d3/d3.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/nvd3/build/nv.d3.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/jquery.sparkline/index.js') }}"></script>
-<script src="{{ asset('assets/vendors/chart.js/dist/Chart.min.js') }}"></script>
-
 <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
 <!-- page js -->
-<script src="{{ asset('assets/js/dashboard/dashboard.js') }}"></script>
+{{--<script src="{{ asset('assets/js/dashboard/dashboard.js') }}"></script>--}}
+
+
+
+@yield('scripts')
 
 </body>
 

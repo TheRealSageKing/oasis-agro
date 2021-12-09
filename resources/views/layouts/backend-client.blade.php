@@ -116,7 +116,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img class="profile-img img-fluid" src="{{ asset('assets/images/user.jpg') }}" alt="">
                                 <div class="user-info">
-                                    <span class="name pdd-right-5">{{ Auth::user()->name }}</span>
+                                    <span class="name pdd-right-5">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
                                     <i class="ti-angle-down font-size-10"></i>
                                 </div>
                             </a>
