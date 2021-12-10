@@ -38,9 +38,20 @@
         <div class="side-nav">
             <div class="side-nav-inner">
                 <div class="side-nav-logo">
-                    <a href="{{ url('/dashboard') }}">
-                        <div class="logo logo-dark" style="background-image: url({{asset('assets/images/logo/logo.png')}})"></div>
-                    </a>
+                    @if (strtolower(\Illuminate\Support\Facades\Auth::user()->getRole()) == 'administrator')
+                        <a href="{{ route('admin.index') }}">
+                            <div class="logo logo-dark" style="background-image: url({{asset('assets/images/logo/logo.png')}})"></div>
+                        </a>
+                    @elseif (strtolower(\Illuminate\Support\Facades\Auth::user()->getRole()) == 'super administrator')
+                        <a href="{{ route('super.index') }}">
+                            <div class="logo logo-dark" style="background-image: url({{asset('assets/images/logo/logo.png')}})"></div>
+                        </a>
+                    @else
+                        <a href="{{ route('client.index') }}">
+                            <div class="logo logo-dark" style="background-image: url({{asset('assets/images/logo/logo.png')}})"></div>
+                        </a>
+                    @endif
+
                     <div class="mobile-toggle side-nav-toggle">
                         <a href="#">
                             <i class="ti-arrow-circle-left"></i>
@@ -51,9 +62,9 @@
                     <li class="nav-item  {{ (request()->is('oasis-admin/dashboard')) ? 'active' : '' }}">
                         <a class="mrg-top-30" href="{{ route('admin.index') }}">
                                 <span class="icon-holder">
-										<i class="ti-home"></i>
-									</span>
-                            <span class="title">Dashboard</span>
+                                    <i class="ti-home"></i>
+                                </span>
+                                <span class="title">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item {{ (request()->is('oasis-admin/packages')) || (request()->is('oasis-admin/packages/*')) ? 'active' : '' }}">

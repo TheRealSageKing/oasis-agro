@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use App\Models\v1\Investment;
+use App\Models\v1\Package;
+use App\Models\v1\PaymentHistory;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -23,7 +27,29 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.admin.index');
+        $payments = PaymentHistory::where('payment_type', 'withdraw')->where('status', 'pending')->get();
+        $investments = Investment::where('is_open', 0);
+        $runningInvestments = $investments->get()->sum(function($q){
+            return $q->pkg_amt * $q->qty;
+        });
+        $pendingPayments = $payments->sum(function($q){
+            return $q->amount;
+        });
+        $customerCount = User::whereHas('roles', function ($u){
+            $u->where('name', 'client');
+        })->count();
+        $paymentCount = $payments->count();
+        $investmentCount = $investments->count();
+        $packageCount = Package::all()->count();
+
+        return view('dashboard.admin.index', [
+            'running_investments' => $runningInvestments,
+            'pending_payments' => $pendingPayments,
+            'customer_count' => $customerCount,
+            'payment_count' => $paymentCount,
+            'investment_count' => $investmentCount,
+            'package_count' => $packageCount
+        ]);
     }
 
     /**

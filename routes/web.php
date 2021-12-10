@@ -49,8 +49,13 @@ Route::get('/super/dashboard', [DashboardController::class, 'super'])->name('sup
 Route::group(['middleware' => ['auth', 'role:Client'], 'prefix' => 'dashboard'], function(){
     Route::get('/my-portfolio', [PortfolioController::class, 'index'])->name('client.portfolio.index');
     Route::get('/payments', [PaymentController::class, 'index'])->name('client.payments.index');
+    Route::get('/payments/history', [PaymentController::class, 'history'])->name('client.payments.history');
+    Route::post('/payments/request', [PaymentController::class, 'request'])->name('client.payments.request');
     Route::get('/invest', [InvestmentController::class, 'index'])->name('client.investments.index');
     Route::get('/my-account', [AccountController::class, 'index'])->name('client.account.index');
+
+    Route::get('/packages', [PackageController::class, 'list'])->name('client.packages.index');
+    Route::get('/packages/detail/{id}', [PackageController::class, 'edit'])->name('client.packages.detail');
 
     Route::get('/investment/create', [InvestmentController::class, 'create'])->name('client.investments.create');
     Route::post('/investment/create', [InvestmentController::class, 'store'])->name('client.investments.store');

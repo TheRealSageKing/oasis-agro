@@ -15,8 +15,8 @@
                     <div class="about-front">
                         <h5>About oasis agro enterprise</h5>
                         <h2>Who are we?</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, making this the first true generator on the Internet. It uses a dictionary.</p>
-                        <p>Generators on the Internet tend to repeat predefined chunks as necessary.</p>
+                        <p>Oasis Agro Enterprise is a rapidly expanding Agro business and farm in Nigeria that specializes in cultivating nutritious food crops, manufacturing and packing food products in the most sanitary conditions, and storing and supplying them to consumers, clients, and business owners for consumption.</p>
+                        <p>Oasis Agro Enterprise has been offering exceptional agricultural services for the past two years, without sacrificing the quality of our services or products. We intend to expand and increase production while also investing in the most cutting-edge agricultural technologies.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 space-break">
@@ -31,8 +31,8 @@
                         <div class="inner-service-bar">
                             <figure class="about-service-icon"><img src="img/master/seeding.png" alt=""></figure>
                             <div class="caption">
-                                <h3>Natural</h3>
-                                <p>Looked up one of the more obscure Latin.</p>
+                                <h3>Agro Investments</h3>
+                                <p>We discover gold mines in agriculture and use the initiative to benefit our investors.</p>
                             </div>
                         </div>
                     </div>
@@ -40,8 +40,8 @@
                         <div class="inner-service-bar mobil-breakpoint">
                             <figure class="about-service-icon"><img src="img/master/wheat.png" alt=""></figure>
                             <div class="caption">
-                                <h3>Wheat</h3>
-                                <p>Looked up one of the more obscure Latin.</p>
+                                <h3>Crop Production & Exportation</h3>
+                                <p>We specialize in growing healthy crops, process, package and export to consumers and businesses</p>
                             </div>
                         </div>
                     </div>
@@ -49,8 +49,8 @@
                         <div class="inner-service-bar tablet-breakpoint">
                             <figure class="about-service-icon"><img src="img/master/truck.png" alt=""></figure>
                             <div class="caption">
-                                <h3>Equipment</h3>
-                                <p>Looked up one of the more obscure Latin.</p>
+                                <h3>Sustainable Development</h3>
+                                <p>Provide sustainable employment for nigerians.</p>
                             </div>
                         </div>
                     </div>
@@ -58,8 +58,8 @@
                         <div class="inner-service-bar tablet-breakpoint">
                             <figure class="about-service-icon"><img src="img/master/cow.png" alt=""></figure>
                             <div class="caption">
-                                <h3>Cattle</h3>
-                                <p>Looked up one of the more obscure Latin.</p>
+                                <h3>Livestocks</h3>
+                                <p>We offer complete lifestock production, processing, and distribution to consumers.</p>
                             </div>
                         </div>
                     </div>

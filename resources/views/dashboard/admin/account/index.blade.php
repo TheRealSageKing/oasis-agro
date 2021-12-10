@@ -7,29 +7,32 @@
         <h4>Accounts</h4>
     </div>
     <div class="row">
-        @if(session()->has('error'))
-            <div class="alert alert-danger">
-                {{ session()->get('error') }}
-            </div>
-        @endif
-        @if(session()->has('success'))
-            <div class="alert alert-success">
-                {{ session()->get('success') }}
-            </div>
-        @endif
+        <div class="col-md-12">
+            @if(session()->has('error'))
+                <div class="alert alert-danger">
+                    {{ session()->get('error') }}
+                </div>
+            @endif
+            @if(session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
+        </div>
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
                     Account Information
                 </div>
                 <div class="card-block">
+
                   <form action="{{ route('admin.account.update') }}" method="post" id="xform">
                             @csrf
                             <div class="form-group">
                                 <input type="email" class="form-control" placeholder="Email Address" name="email" id="email" readonly  value="{{ $user->email ?? old('email')  }}" />
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control @error('phone') is-invalid @enderror" placeholder="Phone Number" name="phone" id="phoneNumber" readonly value="{{ $user->phone ?? old('phone')  }}">
+                                <input type="text" class="form-control @error('phone') is-invalid @enderror" placeholder="Phone Number" name="phone" id="phoneNumber" value="{{ $user->phone ?? old('phone')  }}">
                             </div>
                             <div class="form-group">
                                 <select name="bank" id="bank" class="form-control" required>
@@ -60,14 +63,15 @@
                             <div class="form-group">
                                 <input type="number" class="form-control"
                                        placeholder="Account Number"
-                                       name="account_no" id="accountno"
-                                       max="10"
+                                       name="acc_no" id="accountno"
+{{--                                       max="10" min="10"--}}
                                        onchange="leadingZeros(this)"
-{{--                                       onkeyup="leadingZeros(this)"--}}
-                                       onclick="leadingZeros(this)">
+                                       onclick="leadingZeros(this)"
+                                       value="{{ $user->account_no ?? old('acc_no') }}"
+                                >
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Account Name" name="account_name" id="account_name" value="{{ $user->account_name ?? old('value') }}">
+                                <input type="text" class="form-control" placeholder="Account Name" name="acc_name" id="account_name" value="{{ $user->account_name ?? old('acc_name') }}">
                             </div>
                             <button class="btn btn-info btn-sm" id="submitBtn" type="submit">Update Profile</button>
                         </form>
@@ -84,7 +88,7 @@
                     <form action="{{ route('admin.account.update_password') }}" method="post" id="yform">
                         @csrf
                         <div class="form-group">
-                            <input type="password" class="form-control " placeholder="Password" name="password" id="password">
+                            <input type="password" class="form-control @error('password') is-invalid @enderror " placeholder="Password" name="password" id="password">
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -92,10 +96,15 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Confirm Password" name="password" id="cpassword">
+                            <input type="password" class="form-control @error('password') is-invalid @enderror " placeholder="Confirm Password" name="password_confirmation" id="cpassword">
+                            @error('confirm_password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
 
-                        <button class="btn btn-info btn-sm" id="submitBtn" type="submit">Update Password</button>
+                        <button class="btn btn-info btn-sm" id="submitBtn" type="submit">Change Password</button>
                     </form>
                 </div>
             </div>

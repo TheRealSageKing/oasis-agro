@@ -4,29 +4,9 @@
 
 @section('content')
     <div class="page-title">
-        <h4>Pending Payment Requests</h4>
+        <h4>Request History</h4>
     </div>
     <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-block">
-                    <div class="inline-block">
-                        <h3 class="no-mrg-vertical">{!! config('app.currency') !!}{{number_format($wallet ?? 0, 2) }}</h3>
-                        <p>Wallet Balance</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-block">
-                    <div class="inline-block">
-                        <h3 class="no-mrg-vertical">{!! config('app.currency') !!}{{number_format($ledger ?? 0, 2) }}</h3>
-                        <p>Total Invested</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="col-md-12">
             <div class="card">
                 <div class="card-block">
@@ -42,8 +22,7 @@
                         </div>
                     @endif
 
-                    <button data-toggle="modal" data-target="#default-modal" class="btn btn-sm btn-primary" id="createBtn">Request payment</button>
-                    <a href="{{ route('client.payments.history') }}" class="btn btn-sm btn-success">History</a>
+                    <a href="{{ route('client.payments.index') }}" class="btn btn-sm btn-primary">Back</a>
                     <div class="table-overflow">
                         <table id="oasis-table" class="table table-lg table-hover">
                             <thead>
@@ -126,22 +105,76 @@
     </div>
 @endsection
 
-@section('modal-content')
-    <form id="form" >
-        <div class="modal-body">
-            <div class="alert alert-info">
-                <p>Enter amount you want to retrieve and your password to confirm transaction</p>
-            </div>
-            @csrf
-            <div class="form-group">
-                <input type="number" class="form-control" placeholder="Amount" name="amount" id="amount" min="1000" value="1000">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Confirm Password" name="password" id="password">
+@section('side-modal-content')
+    <div class="side-modal-wrapper">
+        <div class="vertical-align">
+            <div class="table-cell">
+                <div class="pdd-horizon-15">
+                    <h4>Create a Package</h4>
+                    <p class="mrg-btm-15 font-size-13">A new investment package for client/customers to invest in</p>
+
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            {{ $errors->first() }}
+                        </div>
+                    @endif
+
+                    <form action="{{ route('admin.packages.store') }}" method="post" id="form" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" name="edit" value="" id="packageEdit">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Package Name" name="package_name" id="packageName">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Package Cost" name="package_amount" id="packageCost">
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="">Duration</label>
+                                <select name="package_duration" id="packageDuration" class="form-control">
+                                    <option value="30">1 month</option>
+                                    <option value="90">3 months</option>
+                                    <option value="180">6 months</option>
+                                    <option value="360">12 months</option>
+                                    <option value="540">18 months</option>
+                                    <option value="720">24 months</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label for="">ROI</label>
+                                <input type="number" id="packageROI" max="100" min="1" class="form-control" placeholder="ROI (in percentage)" name="package_roi">
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <textarea name="package_description" id="packageDescription" cols="30" rows="10" class="form-control" placeholder="Package Description"></textarea>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-8">
+
+                                <input type="file" name="package_image" id="packageImage" class="hide-me" onchange="loadFile(event, 'fileImage');"/>
+                                <button class="btn btn-sm btn-default btn-block" id="imgUploadBtn" type="button" onclick="triggerUpload(event, '#packageImage');"><i></i> upload image</button>
+
+                                <input type="file" name="package_brochure" id="packageBrochure" class="hide-me" onchange="loadFileName(event, '#brochureImage')"/>
+                                <button class="btn btn-sm btn-default btn-block" id="brochureUploadBtn" type="button" onclick="triggerUpload(event, '#packageBrochure');">
+                                    <i></i> upload brochure <br>
+                                    <span id="brochureImage"></span>
+                                </button>
+                            </div>
+                            <div class="col-4">
+                                <div class="card">
+                                    <img src="{{ asset('img/images/default-package-image.jpg') }}" alt="" class="img-fluid package-image" id="fileImage"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-info btn-sm" id="submitBtn" type="submit">Create Package</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <input type="submit" class="btn btn-primary btn-block no-mrg no-border pdd-vertical-15 ng-scope" value="View Now"/>
-    </form>
+    </div>
 @endsection
 
 @section('scripts')
@@ -173,13 +206,37 @@
             $('#submitBtn').html('Create Package');
         })
 
+        $(document).on('click', '.edit', function (e) {
+            let packageId = $(this).data('id');
+            $.ajax({
+                url: "{{ route('admin.packages.edit', 'XXX' ) }}".replace('XXX', packageId),
+                type: 'GET',
+                success: function(response){
+                    if (response.success)
+                    {
+                        let data = response.data;
+                        $('#packageCost').val( data.amount );
+                        $('#packageDuration').val( data.duration );
+                        $('#packageROI').val( data.roi );
+                        $('#packageName').val( data.name );
+                        $('#packageDescription').val( data.description );
+                        $('#fileImage').attr('src',  data.image );
+                        $('#brochureImage').html( data.brochure_name );
+
+                        $('#packageEdit').val(packageId);
+                        $('#submitBtn').html('Update Package');
+                        $('#side-modal-r').modal();
+                    }
+                }
+            })
+        });
         $(document).on('submit', '#form', function(e){
             e.preventDefault();
             let formData = new FormData(this);
             $.ajax({
-                url : "{{ route('client.payments.request') }}",
+                url : "{{ route('admin.packages.store') }}",
                 type: 'POST',
-                data: formData,
+                data: formData,//$(this).serialize(),
                 cache:false,
                 contentType: false,
                 processData: false,
@@ -193,14 +250,14 @@
                         toastr.error(data.message);
                     }
 
-                    submitBtn.html('Request Payment').prop('disabled', false);
+                    submitBtn.html('Create Package').prop('disabled', false);
 
                 },
                 error: function(err)
                 {
                     let response = JSON.parse(err.responseText);
                     toastr.error(response.message);
-                    submitBtn.html('Request Payment').prop('disabled', false);
+                    submitBtn.html('Create Package').prop('disabled', false);
                 }
             });
             return false;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <title>{{ config('app.name', 'Oasis Agro') }} - @yield('title')</title>
 
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}">
 
@@ -22,7 +23,10 @@
     <link href="{{ asset('assets/css/themify-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/toastr.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/backend-app.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -32,9 +36,20 @@
         <div class="side-nav">
             <div class="side-nav-inner">
                 <div class="side-nav-logo">
-                    <a href="{{ route('base') }}">
-                        <div class="logo logo-dark" style="background-image: url({{ asset('assets/images/logo/logo.png') }})"></div>
-                    </a>
+                    @if (strtolower(\Illuminate\Support\Facades\Auth::user()->getRole()) == 'administrator')
+                        <a href="{{ route('admin.index') }}">
+                            <div class="logo logo-dark" style="background-image: url({{asset('assets/images/logo/logo.png')}})"></div>
+                        </a>
+                    @elseif (strtolower(\Illuminate\Support\Facades\Auth::user()->getRole()) == 'super administrator')
+                        <a href="{{ route('super.index') }}">
+                            <div class="logo logo-dark" style="background-image: url({{asset('assets/images/logo/logo.png')}})"></div>
+                        </a>
+                    @else
+                        <a href="{{ route('client.index') }}">
+                            <div class="logo logo-dark" style="background-image: url({{asset('assets/images/logo/logo.png')}})"></div>
+                        </a>
+                    @endif
+
                     <div class="mobile-toggle side-nav-toggle">
                         <a href="#">
                             <i class="ti-arrow-circle-left"></i>
@@ -158,6 +173,21 @@
                 <div class="container-fluid">
                     @yield('content')
                 </div>
+                <div class="modal slide-in-right modal-right fade" id="side-modal-r">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            @yield('side-modal-content')
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="default-modal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            @yield('modal-content')
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- Content Wrapper END -->
 
@@ -180,22 +210,16 @@
 
     </div>
 </div>
-``
-<script src="{{ asset('assets/js/vendor.js') }}"></script>
+{{--<script src="{{ asset('assets/js/vendor.js') }}"></script>--}}
 
+<script src="{{ mix('assets/js/backend-plugins.js') }}"></script>
+<script src="{{ mix('js/app.js') }}"></script>
 <!-- page plugins js -->
-<script src="{{ asset('assets/vendors/bower-jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
-<script src="{{ asset('assets/js/maps/jquery-jvectormap-us-aea.js') }}"></script>
-<script src="{{ asset('assets/vendors/d3/d3.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/nvd3/build/nv.d3.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/jquery.sparkline/index.js') }}"></script>
-<script src="{{ asset('assets/vendors/chart.js/dist/Chart.min.js') }}"></script>
-
 <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
 <!-- page js -->
-<script src="{{ asset('assets/js/dashboard/dashboard.js') }}"></script>
-
+{{--<script src="{{ asset('assets/js/dashboard/dashboard.js') }}"></script>--}}
+@yield('scripts')
 </body>
 
 </html>

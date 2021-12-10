@@ -11,12 +11,10 @@
                     <div class="col-lg-6">
                         <div class="home-about">
                             <h5>Oasis Agro Enterprise</h5>
-                            <h2>Our Mission</h2>
-                            <p>Our mission is to actively contribute to the sustainable development of food production in
-                                Imo state Nigeria, reducing food import and increasing production and export of food from
-                                Eastern Nigeria to other parts of the country and the World While engaging Nigerian Youths
-                                actively in Embracing agriculture as a Golden opportunity in the fight against poverty in Africa</p>
-                            <div class="btn-more-box"><a class="btn-hover-corner" href="{{ url('about-us#mission') }}">LEARN MORE</a></div>
+                            <h2>About Us</h2>
+                            <p>Oasis Agro Enterprise is a rapidly expanding Agro business and farm in Nigeria that specializes in cultivating nutritious food crops, manufacturing and packing food products in the most sanitary conditions, and storing and supplying them to consumers, clients, and business owners for consumption.</p>
+                            <p>Oasis Agro Enterprise has been offering exceptional agricultural services for the past two years, without sacrificing the quality of our services or products. We intend to expand and increase production while also investing in the most cutting-edge agricultural technologies.</p>
+                            <div class="btn-more-box"><a class="btn-hover-corner" href="{{ url('about-us') }}">LEARN MORE</a></div>
                         </div>
                     </div>
                     <div class="col-lg-6 space-break">
@@ -24,29 +22,29 @@
                             <div class="col-md-6">
                                 <div class="home-icon-box">
                                     <figure class="icon-pic"><img src="img/master/seeding.png" alt=""></figure>
-                                    <h3>Natural Products</h3>
-                                    <p>Many desktop publishing packages and web page.</p>
+                                    <h3>Agro Investments</h3>
+                                    <p>We discover gold mines in agriculture and use the initiative to benefit our investors.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="home-icon-box">
                                     <figure class="icon-pic"><img src="img/master/cow.png" alt=""></figure>
-                                    <h3>Cattle</h3>
-                                    <p>Many desktop publishing packages and web page.</p>
+                                    <h3>Livestocks</h3>
+                                    <p>We offer complete lifestock production, processing, and distribution to consumers.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="home-icon-box">
                                     <figure class="icon-pic"><img src="img/master/wheat.png" alt=""></figure>
-                                    <h3>Wheat Cultivation</h3>
-                                    <p>Many desktop publishing packages and web page.</p>
+                                    <h3>Crop Production & Exportation</h3>
+                                    <p>We specialize in growing healthy crops, process, package and export to consumers and businesses</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="home-icon-box">
                                     <figure class="icon-pic"><img src="img/master/truck.png" alt=""></figure>
-                                    <h3>Modern Truck</h3>
-                                    <p>Many desktop publishing packages and web page.</p>
+                                    <h3>Sustainable Development</h3>
+                                    <p>Provide sustainable employment for nigerians.</p>
                                 </div>
                             </div>
                         </div>
@@ -59,8 +57,8 @@
         <!--PACKAGES START-->
         <div class="container">
             <div class="section-title">
-                <h2>Running <span>Packages</span></h2>
-                <p>We specialise in intelligent & effective Search and believes in the power of partnerships to grow business.</p>
+                <h2>Our <span>Products</span></h2>
+                <p>For the past 2 years, Oasis Agro Enterprise has been providing excellent agricultural services, without compromising on the quality of our services or products.</p>
             </div>
             <div class="row">
                 <div class="col-lg-4">
@@ -72,18 +70,10 @@
                             </figure>
                         </a>
                         <div class="post-caption">
-                            <h3><a href="#">Freeze Concern Hits Wheat Farms</a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                            <hr class="posts">
-                            <div class="bottom-post">
-                                <div class="post-author">
-                                    <figure class="author-avatar"><img src="img/images/post-avatar1.jpg" alt=""></figure>
-                                    <div class="about-author">
-                                        <h4 class="author-name"><a href="#">John Wilson</a></h4>
-                                        <p class="posted-on">January 15, 2019</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3>CASSAVA <br><span>(Manihot esculenta)</span></h3>
+                            <p>Cassava is the third-largest source of food carbohydrates. its a major staple food in the developing world, providing a basic diet for over half a billion people. It is a drought-tolerant crop, capable of growing on marginal soils. </p>
+                            <br>
+                            <h5><a href="{{url('our-products#cassava')}}">Learn More</a></h5>
                         </div>
                     </div>
                 </div>
@@ -96,18 +86,10 @@
                             </figure>
                         </a>
                         <div class="post-caption">
-                            <h3><a href="#">National Association of Wheat Growers</a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                            <hr class="posts">
-                            <div class="bottom-post">
-                                <div class="post-author">
-                                    <figure class="author-avatar"><img src="img/images/post-avatar2.jpg" alt=""></figure>
-                                    <div class="about-author">
-                                        <h4 class="author-name"><a href="#">Richard Miller</a></h4>
-                                        <p class="posted-on">January 13, 2019</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3>Maize <br><span>(Zea mays)</span></h3>
+                            <p>Maize is the most important cereal grain in the world, providing nutrients for humans and animals and serving as a basic raw material for the production of starch, alcoholic beverages, food sweeteners and, more recently, fuel.</p>
+                            <br>
+                            <h5><a href="{{url('our-products#maize')}}">Learn More</a></h5>
                         </div>
                     </div>
                 </div>
@@ -120,18 +102,10 @@
                             </figure>
                         </a>
                         <div class="post-caption">
-                            <h3><a href="#">Farmer Sentiment Darkens Hopes Fade</a></h3>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                            <hr class="posts">
-                            <div class="bottom-post">
-                                <div class="post-author">
-                                    <figure class="author-avatar"><img src="img/images/post-avatar3.jpg" alt=""></figure>
-                                    <div class="about-author">
-                                        <h4 class="author-name"><a href="#">Lisa Smith</a></h4>
-                                        <p class="posted-on">January 12, 2019</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3>PALM OIL <br><span>(Elaeis guineensis)</span></h3>
+                            <p>Palm oil is a common cooking ingredient in the tropical belt of Africa, Southeast Asia and parts of Brazil. Its use in the commercial food industry is widespread because of its lower cost and the high oxidative stability. </p>
+                            <br>
+                            <h5><a href="{{url('our-products#palm-oil')}}">Learn More</a></h5>
                         </div>
                     </div>
                 </div>
@@ -144,10 +118,12 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="about-company">
-                        <h5>Why Choose Us</h5>
-                        <h2>Experience the real agriculture</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                        <figure class="signature"><img src="img/images/signature.png" alt=""></figure>
+{{--                        <h5>Why Choose Us</h5>--}}
+                        <h2>Why Choose Us</h2>
+                        <p>For over two years, we have been investigating, identifying, controlling, and implementing appropriate farming practices to enhance agro development and sustain food production. </p>
+                        <p>Choosing us means partnering with a group of highly devoted and experienced specialists whose primary goal is to grow, produce, and supply healthy food crops for human consumption. </p>
+                        <p>We are completely committed to raising your level of living through our products and providing enormous value to you through our investment packages. We are committed to ensuring that our clients and partners are satisfied with our services, and we are passionate about our mission statement.</p>
+
                     </div>
                 </div>
                 <div class="col-lg-4 space-break">
@@ -155,7 +131,7 @@
                         <figure class="mission-thumb"><img src="img/images/img2.jpg" alt=""></figure>
                         <div class="caption">
                             <h3>Our Mission</h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable.</p>
+                            <p>Our mission is to actively contribute to the sustainable development of food production in Nigeria by reducing food imports and increasing food exports.</p>
                         </div>
                     </div>
                 </div>
@@ -164,7 +140,7 @@
                         <figure class="vision-thumb"><img src="img/images/img3.jpg" alt=""></figure>
                         <div class="caption">
                             <h3>Our Vision</h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable.</p>
+                            <p>Our vision is to actively actively engage Nigerian youths in embracing agriculture as a golden opportunity in the fight against poverty.</p>
                         </div>
                     </div>
                 </div>
@@ -173,32 +149,32 @@
         <!--WHY US END-->
 
         <!--CLIENTS START-->
-        <div class="container">
-            <div class="section-title">
-                <h2>Our <span>Partners</span></h2>
-                <p>We specialise in intelligent & effective Search and believes in the power of partnerships to grow business.</p>
-            </div>
-            <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">
-                    <figure class="partners-logo"><img src="img/images/client-1.png" alt=""></figure>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">
-                    <figure class="partners-logo"><img src="img/images/client-5.png" alt=""></figure>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">
-                    <figure class="partners-logo"><img src="img/images/client-3.png" alt=""></figure>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <figure class="partners-logo"><img src="img/images/client-7.png" alt=""></figure>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <figure class="partners-logo"><img src="img/images/client-2.png" alt=""></figure>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <figure class="partners-logo"><img src="img/images/client-6.png" alt=""></figure>
-                </div>
-            </div>
-        </div>
+{{--        <div class="container">--}}
+{{--            <div class="section-title">--}}
+{{--                <h2>Our <span>Partners</span></h2>--}}
+{{--                <p>We specialise in intelligent & effective Search and believes in the power of partnerships to grow business.</p>--}}
+{{--            </div>--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">--}}
+{{--                    <figure class="partners-logo"><img src="img/images/client-1.png" alt=""></figure>--}}
+{{--                </div>--}}
+{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">--}}
+{{--                    <figure class="partners-logo"><img src="img/images/client-5.png" alt=""></figure>--}}
+{{--                </div>--}}
+{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">--}}
+{{--                    <figure class="partners-logo"><img src="img/images/client-3.png" alt=""></figure>--}}
+{{--                </div>--}}
+{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2">--}}
+{{--                    <figure class="partners-logo"><img src="img/images/client-7.png" alt=""></figure>--}}
+{{--                </div>--}}
+{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2">--}}
+{{--                    <figure class="partners-logo"><img src="img/images/client-2.png" alt=""></figure>--}}
+{{--                </div>--}}
+{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2">--}}
+{{--                    <figure class="partners-logo"><img src="img/images/client-6.png" alt=""></figure>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <!--CLIENTS END-->
 
         <!--CONTACT US START-->

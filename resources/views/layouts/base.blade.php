@@ -93,7 +93,13 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('dashboard') }}">MY ACCOUNT</a>
+                                @if (strtolower(\Illuminate\Support\Facades\Auth::user()->getRole()) == 'administrator')
+                                    <a class="nav-link" href="{{ route('admin.index') }}">MY ACCOUNT</a>
+                                @elseif (strtolower(\Illuminate\Support\Facades\Auth::user()->getRole()) == 'super administrator')
+                                    <a class="nav-link" href="{{ route('super.index') }}">MY ACCOUNT</a>
+                                @else
+                                    <a class="nav-link" href="{{ route('client.index') }}">MY ACCOUNT</a>
+                                @endif
                             </li>
                         @endguest
                     </ul>
