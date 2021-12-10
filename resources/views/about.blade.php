@@ -28,8 +28,10 @@
             <div class="services-bar space-break">
                 <div class="row">
                     <div class="col-md-6 col-lg-3">
-                        <div class="inner-service-bar">
+                        <div class="inner-service-bar d-flex">
+                            <div class="flex-grow-lg-1">
                             <figure class="about-service-icon"><img src="img/master/seeding.png" alt=""></figure>
+                            </div>
                             <div class="caption">
                                 <h3>Agro Investments</h3>
                                 <p>We discover gold mines in agriculture and use the initiative to benefit our investors.</p>
@@ -37,8 +39,10 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <div class="inner-service-bar mobil-breakpoint">
+                        <div class="inner-service-bar mobil-breakpoint d-flex">
+                            <div class="flex-grow-lg-1">
                             <figure class="about-service-icon"><img src="img/master/wheat.png" alt=""></figure>
+                            </div>
                             <div class="caption">
                                 <h3>Crop Production & Exportation</h3>
                                 <p>We specialize in growing healthy crops, process, package and export to consumers and businesses</p>
@@ -46,8 +50,10 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <div class="inner-service-bar tablet-breakpoint">
+                        <div class="inner-service-bar tablet-breakpoint d-flex">
+                            <div class="flex-grow-lg-1">
                             <figure class="about-service-icon"><img src="img/master/truck.png" alt=""></figure>
+                            </div>
                             <div class="caption">
                                 <h3>Sustainable Development</h3>
                                 <p>Provide sustainable employment for nigerians.</p>
@@ -55,8 +61,10 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <div class="inner-service-bar tablet-breakpoint">
-                            <figure class="about-service-icon"><img src="img/master/cow.png" alt=""></figure>
+                        <div class="inner-service-bar tablet-breakpoint d-flex">
+                            <div class="flex-grow-lg-1">
+                                <figure class="about-service-icon"><img src="img/master/cow.png" alt=""></figure>
+                            </div>
                             <div class="caption">
                                 <h3>Livestocks</h3>
                                 <p>We offer complete lifestock production, processing, and distribution to consumers.</p>
@@ -69,72 +77,72 @@
         <!--ABOUT US SECTION END-->
 
         <!--TEAM START-->
-        <div class="container-fluid inner-color">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Our <span>Team</span></h2>
-                    <p>We specialise in intelligent & effective Search and believes in the power of partnerships to grow business.</p>
-                </div>
-                <div class="team-carousel slider hover-effects image-hover">
-                    <div class="slide" data-aos="fade-up">
-                        <div class="team-thumb">
-                            <figure class="member-headshot"><img src="img/images/farmer1.jpg" alt=""></figure>
-                            <div class="member-social">
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>
-                            </div>
-                            <div class="team-caption">
-                                <h3>Bryan Smith</h3>
-                                <p>Stocker</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide" data-aos="fade-up">
-                        <div class="team-thumb">
-                            <figure class="member-headshot"><img src="img/images/farmer2.jpg" alt=""></figure>
-                            <div class="member-social">
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>
-                            </div>
-                            <div class="team-caption">
-                                <h3>Sara Jones</h3>
-                                <p>Food Production</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide" data-aos="fade-up">
-                        <div class="team-thumb">
-                            <figure class="member-headshot"><img src="img/images/farmer3.jpg" alt=""></figure>
-                            <div class="member-social">
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>
-                            </div>
-                            <div class="team-caption">
-                                <h3>Tim Douglas</h3>
-                                <p>Laborer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide" data-aos="fade-up">
-                        <div class="team-thumb">
-                            <figure class="member-headshot"><img src="img/images/farmer4.jpg" alt=""></figure>
-                            <div class="member-social">
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>
-                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>
-                            </div>
-                            <div class="team-caption">
-                                <h3>Robert Thomson</h3>
-                                <p>Warehouse</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--        <div class="container-fluid inner-color">--}}
+{{--            <div class="container">--}}
+{{--                <div class="section-title">--}}
+{{--                    <h2>Our <span>Team</span></h2>--}}
+{{--                    <p>We specialise in intelligent & effective Search and believes in the power of partnerships to grow business.</p>--}}
+{{--                </div>--}}
+{{--                <div class="team-carousel slider hover-effects image-hover">--}}
+{{--                    <div class="slide" data-aos="fade-up">--}}
+{{--                        <div class="team-thumb">--}}
+{{--                            <figure class="member-headshot"><img src="img/images/farmer1.jpg" alt=""></figure>--}}
+{{--                            <div class="member-social">--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="team-caption">--}}
+{{--                                <h3>Bryan Smith</h3>--}}
+{{--                                <p>Stocker</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="slide" data-aos="fade-up">--}}
+{{--                        <div class="team-thumb">--}}
+{{--                            <figure class="member-headshot"><img src="img/images/farmer2.jpg" alt=""></figure>--}}
+{{--                            <div class="member-social">--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="team-caption">--}}
+{{--                                <h3>Sara Jones</h3>--}}
+{{--                                <p>Food Production</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="slide" data-aos="fade-up">--}}
+{{--                        <div class="team-thumb">--}}
+{{--                            <figure class="member-headshot"><img src="img/images/farmer3.jpg" alt=""></figure>--}}
+{{--                            <div class="member-social">--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="team-caption">--}}
+{{--                                <h3>Tim Douglas</h3>--}}
+{{--                                <p>Laborer</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="slide" data-aos="fade-up">--}}
+{{--                        <div class="team-thumb">--}}
+{{--                            <figure class="member-headshot"><img src="img/images/farmer4.jpg" alt=""></figure>--}}
+{{--                            <div class="member-social">--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>--}}
+{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="team-caption">--}}
+{{--                                <h3>Robert Thomson</h3>--}}
+{{--                                <p>Warehouse</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <!--TEAM END-->
 
         <!--WHY US START-->
@@ -142,10 +150,12 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="about-company">
-                        <h5>Why Choose Us</h5>
-                        <h2>Experience the real agriculture</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                        <figure class="signature"><img src="img/images/signature.png" alt=""></figure>
+                        {{--                        <h5>Why Choose Us</h5>--}}
+                        <h2>Why Choose Us</h2>
+                        <p>For over two years, we have been investigating, identifying, controlling, and implementing appropriate farming practices to enhance agro development and sustain food production. </p>
+                        <p>Choosing us means partnering with a group of highly devoted and experienced specialists whose primary goal is to grow, produce, and supply healthy food crops for human consumption. </p>
+                        <p>We are completely committed to raising your level of living through our products and providing enormous value to you through our investment packages. We are committed to ensuring that our clients and partners are satisfied with our services, and we are passionate about our mission statement.</p>
+
                     </div>
                 </div>
                 <div class="col-lg-4 space-break">
@@ -153,7 +163,7 @@
                         <figure class="mission-thumb"><img src="img/images/img2.jpg" alt=""></figure>
                         <div class="caption">
                             <h3>Our Mission</h3>
-                            <p>Our mission is to actively contribute to the sustainable development of food production in Nigeria, reducing food import and maximizing production and export</p>
+                            <p>Our mission is to actively contribute to the sustainable development of food production in Nigeria by reducing food imports and increasing food exports.</p>
                         </div>
                     </div>
                 </div>
@@ -162,12 +172,11 @@
                         <figure class="vision-thumb"><img src="img/images/img3.jpg" alt=""></figure>
                         <div class="caption">
                             <h3>Our Vision</h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable.</p>
+                            <p>Our vision is to actively actively engage Nigerian youths in embracing agriculture as a golden opportunity in the fight against poverty.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr class="divider">
         </div>
         <!--WHY US END-->
 
@@ -214,18 +223,19 @@
                                 <p>8273 NW 56th ST Miami, 33195 US</p>
                             </div>
                         </div>
-                        <div class="block-phone">
+                        <div class="block-phone d-flex">
                             <figure class="phone-icon"><img src="img/master/phone.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>OFFICE PHONE</h4>
-                                <p>+ 0511 01220 3320</p>
+                                <p>+234 70 6304 9118</p>
+                                <p>+234 70 6836 0519</p>
                             </div>
                         </div>
                         <div class="block-email">
                             <figure class="phone-icon"><img src="img/master/mail.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>EMAIL</h4>
-                                <p>info@agrom.com</p>
+                                <p>info@oasisagroenterprise.com</p>
                             </div>
                         </div>
                         <div class="social-networks">
@@ -241,7 +251,8 @@
                 </div>
             </div>
             <div class="form-box">
-                <form id="contact-form" method="post" action="http://quickdevs.com/templates/agrom/contact.php">
+                <form id="dope-contact-form" method="post">
+                    @csrf
                     <div class="messages"></div>
                     <div class="controls">
                         <div class="row">
@@ -259,20 +270,20 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input id="form_phone" type="tel" name="phone" class="form-control customize" placeholder="Please enter your phone">
+                                    <input id="form_phone" type="tel" name="phone_number" class="form-control customize" placeholder="Please enter your phone">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea id="form_message" name="message" class="form-control customize" placeholder="Your message" rows="5" required="required" data-error="Please,leave us a message."></textarea>
+                                    <textarea id="form_message" name="message" class="form-control customize" placeholder="Your message" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 contact-btn">
-                                <p><input type="submit" class="btn btn-custom" value="Send message"></p>
+                            <div class="col-md-12">
+                                <p><button type="submit" class="btn btn-custom" id="submit-btn">Send message</button></p>
                             </div>
                         </div>
                     </div>
@@ -283,4 +294,41 @@
 
     </section>
 
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        $(document).on('submit', '#dope-contact-form', function(e){
+            e.preventDefault();
+
+            let form = $(this);
+            let data = form.serialize();
+            let submitBtn = $('#submit-btn');
+            let oldVal = submitBtn.html();
+
+            submitBtn.html("<span class='fa fa-spin fa-spinner'></span> Sending Message...").prop('disabled', true);
+            $.ajax({
+                url:'{{route('submit-contact-us')}}',
+                data:data,
+                type: 'POST',
+                success: function(data){
+                    if (data.success)
+                    {
+                        toastr.success('Thank you for writing to us we will get back to you as soon as possible');
+                        document.getElementById("dope-contact-form").reset();
+                    }else{
+                        toastr.error(data.message);
+                    }
+
+                    submitBtn.html(oldVal).prop('disabled', false);
+                },
+                error: function(err)
+                {
+                    let response = JSON.parse(err.responseText);
+                    toastr.error(response.message);
+                    submitBtn.html(oldVal).prop('disabled', false);
+                }
+            })
+        });
+    </script>
 @endsection

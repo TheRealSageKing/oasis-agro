@@ -15,6 +15,10 @@ return [
 
     'name' => env('APP_NAME', 'Oasis Agro'),
     'currency' => env('CURRENCY', '&#8358;'),
+    'phone1' => env('PHONE1', '+ 234 70 6304 9118'),
+    'phone2' => env('PHONE1', '+ 234 70 6304 9118'),
+    'address' => env('ADDRESS', '8273 NW 56th ST Miami, Florida, 33195 United States'),
+    'email' => env('EMAIL', 'info@oasisagroenterprise.com'),
 
     /*
     |--------------------------------------------------------------------------

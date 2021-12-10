@@ -12,22 +12,36 @@
             <div class="row">
                 <!--CONTACT INFORMATION START-->
                 <div class="col-lg-6">
-                    <div class="contact-box">
-                        <div class="section-title">
-                            <h2>Send <span>Message</span></h2>
-                            <p>We specialise in intelligent & effective Search and believes in the power of partnerships to grow business.</p>
+                    <div class="contact-info">
+                        <p>Get In Touch</p>
+                        <h2>Contact Us</h2>
+                        <div class="block-address">
+                            <figure class="address-icon"><img src="img/master/map.png" alt=""></figure>
+                            <div class="inner-info">
+                                <h4>ADDRESS</h4>
+                                <p>8273 NW 56th ST Miami, 33195 US</p>
+                            </div>
                         </div>
-                        <div class="span-contact">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <p>&nbsp;+ 0511 00 3322 22</p>
+                        <div class="block-phone d-flex">
+                            <figure class="phone-icon"><img src="img/master/phone.png" alt=""></figure>
+                            <div class="inner-info">
+                                <h4>OFFICE PHONE</h4>
+                                <p>+234 70 6304 9118</p>
+                                <p>+234 70 6836 0519</p>
+                            </div>
                         </div>
-                        <div class="span-contact">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <p>&nbsp;info@domain.com</p>
+                        <div class="block-email">
+                            <figure class="phone-icon"><img src="img/master/mail.png" alt=""></figure>
+                            <div class="inner-info">
+                                <h4>EMAIL</h4>
+                                <p>info@oasisagroenterprise.com</p>
+                            </div>
                         </div>
-                        <div class="span-contact">
-                            <div class="contact-icon"><i class="fas fa-map"></i></div>
-                            <p>&nbsp;8273 NW 56th ST Miami, Florida, 33195 United States</p>
+                        <div class="social-networks">
+                            <div class="networks-list"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                            <div class="networks-list"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                            <div class="networks-list"><a href="#"><i class="fab fa-instagram"></i></a></div>
+                            <div class="networks-list"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
                         </div>
                     </div>
                 </div>

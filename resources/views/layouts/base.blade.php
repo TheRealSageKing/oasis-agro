@@ -79,6 +79,9 @@
                             <a class="nav-link" href="{{ route('about') }}">ABOUT</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('products') }}">OUR PRODUCTS</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
                         </li>
                         <li class="nav-item">
@@ -118,17 +121,22 @@
                     <a href="{{ url('/') }}">
                         <figure class="footer-logo"><img src="{{asset('img/master/logo.png')}}" alt=""></figure>
                     </a>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                    <p>Contributing to the sustainable development of food production in Nigeria</p>
                     <p class="copyright">© {{ date('Y') }} {{ config('app.name', 'Oasis Agro') }}</p>
                 </div>
             </div>
             <div class="col-lg-3 footer-center-col">
                 <h4>FIND US</h4>
                 <div class="location">
-                    <p>Adddres:  8273 NW 56th ST Miami, Florida, 33195 United States</p>
-                    <p>Phone: + 0511 0000 3322</p>
-                    <p>Email: INFO@OASISAGRO.COM</p>
-                    <p>Fax: + 0511 01220 3320</p>
+                    <p>Adddres:  {!!  config('app.address') !!}</p>
+                    <div class="d-flex">
+                        <p>Phone: </p>
+                        <div>
+                            <p>{!! config('app.phone1') !!}</p>
+                            <p>{!! config('app.phone2') !!}</p>
+                        </div>
+                    </div>
+                    <p>Email: {!! strtoupper(config('app.email')) !!}</p>
                 </div>
             </div>
             <div class="col-lg-4 footer-col-right">

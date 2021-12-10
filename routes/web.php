@@ -35,6 +35,22 @@ Route::get('/about-us', function () {
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');
+Route::get('/our-products', function () {
+    return view('products');
+})->name('products');
+
+Route::get('/our-products/maize', function () {
+    return view('products.maize');
+})->name('products.maize');
+
+Route::get('/our-products/cassava', function () {
+    return view('products.cassava');
+})->name('products.cassava');
+
+Route::get('/our-products/palm-oil', function () {
+    return view('products.palmoil');
+})->name('products.palmoil');
+
 Route::get('/contact-us', function () {
     return view('contact');
 })->name('contact-us');

@@ -54,7 +54,7 @@
         </div>
         <!--HOME ABOUT END-->
 
-        <!--PACKAGES START-->
+        <!--PRODUCTS START-->
         <div class="container">
             <div class="section-title">
                 <h2>Our <span>Products</span></h2>
@@ -110,8 +110,14 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="btn-more-box">
+                    <a class="btn-hover-corner" href="{{ url('our-products') }}">LEARN MORE</a>
+                </div>
+            </div>
         </div>
-        <!--PACKAGES END-->
+        <!--PRODUCTS END-->
+
 
         <!--WHY US START-->
         <div class="container">
@@ -176,6 +182,47 @@
 {{--            </div>--}}
 {{--        </div>--}}
         <!--CLIENTS END-->
+        <!--COUNTER START-->
+        <div class="container-fluid inner-color-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="inner-counter">
+                            <div class="counter-statistics">
+                                <div class="counter">12001</div>
+                                <h5>CULTIVATED YARDS</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="inner-counter">
+                            <div class="counter-statistics">
+                                <div class="counter">1455</div>
+                                <h5>Happy Customers</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="inner-counter">
+                            <div class="counter-statistics">
+                                <div class="counter">233</div>
+                                <h5>Company Awards</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="inner-counter last-box-counter">
+                            <div class="counter-statistics">
+                                <div class="counter">25</div>
+                                <h5>Years Of Experience</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wheat-bg"><img src="img/master/wheat.svg" alt=""></div>
+        </div>
+        <!--COUNTER END-->
 
         <!--CONTACT US START-->
         <div class="container-fluid home-contact">
@@ -191,18 +238,19 @@
                                 <p>8273 NW 56th ST Miami, 33195 US</p>
                             </div>
                         </div>
-                        <div class="block-phone">
+                        <div class="block-phone d-flex">
                             <figure class="phone-icon"><img src="img/master/phone.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>OFFICE PHONE</h4>
-                                <p>+ 0511 01220 3320</p>
+                                <p>+234 70 6304 9118</p>
+                                <p>+234 70 6836 0519</p>
                             </div>
                         </div>
                         <div class="block-email">
                             <figure class="phone-icon"><img src="img/master/mail.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>EMAIL</h4>
-                                <p>info@agrom.com</p>
+                                <p>info@oasisagroenterprise.com</p>
                             </div>
                         </div>
                         <div class="social-networks">
@@ -218,7 +266,8 @@
                 </div>
             </div>
             <div class="form-box">
-                <form id="contact-form" method="post" action="http://quickdevs.com/templates/agrom/contact.php">
+                <form id="dope-contact-form" method="post">
+                    @csrf
                     <div class="messages"></div>
                     <div class="controls">
                         <div class="row">
@@ -236,20 +285,20 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input id="form_phone" type="tel" name="phone" class="form-control customize" placeholder="Please enter your phone">
+                                    <input id="form_phone" type="tel" name="phone_number" class="form-control customize" placeholder="Please enter your phone">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea id="form_message" name="message" class="form-control customize" placeholder="Your message" rows="5" required="required" data-error="Please,leave us a message."></textarea>
+                                    <textarea id="form_message" name="message" class="form-control customize" placeholder="Your message" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 contact-btn">
-                                <p><input type="submit" class="btn btn-custom" value="Send message"></p>
+                            <div class="col-md-12">
+                                <p><button type="submit" class="btn btn-custom" id="submit-btn">Send message</button></p>
                             </div>
                         </div>
                     </div>
@@ -258,4 +307,41 @@
         </div>
         <!--CONTACT US END-->
 
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        $(document).on('submit', '#dope-contact-form', function(e){
+            e.preventDefault();
+
+            let form = $(this);
+            let data = form.serialize();
+            let submitBtn = $('#submit-btn');
+            let oldVal = submitBtn.html();
+
+            submitBtn.html("<span class='fa fa-spin fa-spinner'></span> Sending Message...").prop('disabled', true);
+            $.ajax({
+                url:'{{route('submit-contact-us')}}',
+                data:data,
+                type: 'POST',
+                success: function(data){
+                    if (data.success)
+                    {
+                        toastr.success('Thank you for writing to us we will get back to you as soon as possible');
+                        document.getElementById("dope-contact-form").reset();
+                    }else{
+                        toastr.error(data.message);
+                    }
+
+                    submitBtn.html(oldVal).prop('disabled', false);
+                },
+                error: function(err)
+                {
+                    let response = JSON.parse(err.responseText);
+                    toastr.error(response.message);
+                    submitBtn.html(oldVal).prop('disabled', false);
+                }
+            })
+        });
+    </script>
 @endsection
