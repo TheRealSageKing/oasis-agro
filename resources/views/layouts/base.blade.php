@@ -164,7 +164,7 @@ JAVASCRIPTS
 =============================================== -->
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ asset('js/plugins.js') }}"></script>
-{{--<script src="{{ asset('js/bootstrap.min.js') }}"></script>--}}
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/agrom.js') }}"></script>
 <script src="{{ asset('js/util.js') }}"></script>
 <script src="{{ asset('js/swipe-content.js') }}"></script>

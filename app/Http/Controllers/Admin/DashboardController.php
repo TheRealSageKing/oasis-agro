@@ -28,7 +28,7 @@ class DashboardController extends Controller
     public function index()
     {
         $payments = PaymentHistory::where('payment_type', 'withdraw')->where('status', 'pending')->get();
-        $investments = Investment::where('is_open', 0);
+        $investments = Investment::where('is_open', 1);
         $runningInvestments = $investments->get()->sum(function($q){
             return $q->pkg_amt * $q->qty;
         });

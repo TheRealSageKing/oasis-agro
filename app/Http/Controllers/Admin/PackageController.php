@@ -17,8 +17,14 @@ class PackageController extends Controller
         return view('dashboard.admin.packages.index',  compact('packages'));
     }
 
-    public function create(){
-        return view('dashboard.admin.packages.create');
+    public function buyPackage($id){
+        try{
+            $package = Package::find($id);
+            return view('dashboard.client.package.buypackage', compact('package'));
+        }catch(\Exception $ex)
+        {
+            return redirect()->back()->withErrors(['msg' => $ex->getMessage()]);
+        }
     }
 
     public function store(PackageRequest $request)

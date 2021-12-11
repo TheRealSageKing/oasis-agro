@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\InvestmentController as AdminInvestmentController
 use App\Http\Controllers\Admin\AccountController as AdminAccountController;
 use App\Http\Controllers\Admin\PaymentController as AdminPaymentController;
 use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\PaymentGatewayController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,6 +73,7 @@ Route::group(['middleware' => ['auth', 'role:Client'], 'prefix' => 'dashboard'],
 
     Route::get('/packages', [PackageController::class, 'list'])->name('client.packages.index');
     Route::get('/packages/detail/{id}', [PackageController::class, 'edit'])->name('client.packages.detail');
+    Route::get('/packages/buy/{id}', [PackageController::class, 'buyPackage'])->name('client.packages.buy');
 
     Route::get('/investment/create', [InvestmentController::class, 'create'])->name('client.investments.create');
     Route::post('/investment/create', [InvestmentController::class, 'store'])->name('client.investments.store');
@@ -104,3 +106,6 @@ Route::group(['middleware' => ['auth', 'role:Administrator'], 'prefix' => 'oasis
     Route::post('/update', [AdminAccountController::class, 'update'])->name('admin.account.update');
     Route::post('/update-password', [AdminAccountController::class, 'updatePassword'])->name('admin.account.update_password');
 });
+
+Route::post('/pay', [PaymentGatewayController::class, 'redirectToGateway'])->name('pay');
+Route::get('/payment/callback', [PaymentGatewayController::class, 'handleGatewayCallback']);

@@ -15,8 +15,8 @@ class InvestmentController extends Controller
      */
     public function index()
     {
-        $invesments = Investment::with('package')->get();
-        return view('dashboard.admin.investments.index', compact('invesments'));
+        $investments = Investment::with(['user','package'])->get();
+        return view('dashboard.admin.investments.index', compact('investments'));
     }
 
     /**

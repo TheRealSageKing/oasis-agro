@@ -62,9 +62,7 @@
                                         </td>
                                         <td>
                                             <div class="mrg-top-10 text-center dropdown inline-block">
-                                                <button class="btn btn-lg btn-info buy-package" type="button" data-id="{{$package->id}}">
-                                                    BUY
-                                                </button>
+                                                <a href="{{ route('client.packages.buy', $package->id) }}" class="btn btn-lg btn-info buy-package"> Buy Investment</a>
                                             </div>
                                         </td>
                                     </tr>
@@ -124,15 +122,6 @@
                 success: function(response){
                     if (response.success)
                     {
-                        let data = response.data;
-                        $('#packageCost').html( data.amount );
-                        $('#packageDuration').html( data.duration );
-                        $('#packageROI').html( data.roi );
-                        $('#packageName').html( data.name );
-                        $('#packageDescription').html( data.description );
-                        $('#packageImage').attr('src',  data.image );
-                        $('#brochureImage').html( data.brochure_name );
-
                         $('#default-modal').modal();
                     }
                 }

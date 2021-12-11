@@ -17,8 +17,13 @@ return [
     'currency' => env('CURRENCY', '&#8358;'),
     'phone1' => env('PHONE1', '+ 234 70 6304 9118'),
     'phone2' => env('PHONE1', '+ 234 70 6304 9118'),
-    'address' => env('ADDRESS', '8273 NW 56th ST Miami, Florida, 33195 United States'),
+    'address' => env('ADDRESS', 'Futo road, Umuayo,Eziobodo , Imo state'),
     'email' => env('EMAIL', 'info@oasisagroenterprise.com'),
+    'map_url' => env('MAP_URL', 'https://www.google.com/maps/search/Futo+road,+Umuayo,Eziobodo+,+Imo+state/@5.4005516,6.9790784,15z'),
+    'socials_fb' => env('SOCIALS_FB', 'info@oasisagroenterprise.com'),
+    'socials_tw' => env('SOCIALS_TW', 'info@oasisagroenterprise.com'),
+    'socials_ig' => env('SOCIALS_IG', 'info@oasisagroenterprise.com'),
+    'socials_li' => env('SOCIALS_LI', 'info@oasisagroenterprise.com'),
 
     /*
     |--------------------------------------------------------------------------

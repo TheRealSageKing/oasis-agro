@@ -15,7 +15,8 @@
                             <thead>
                             <tr>
                                 <th>S/N</th>
-                                <th>Name</th>
+                                <th>Client Name</th>
+                                <th>Package</th>
                                 <th>Quantity</th>
                                 <th>Amount</th>
                                 <th>Duration</th>
@@ -28,12 +29,17 @@
                             </thead>
                             <tbody>
                             @if (isset($investments) && $investments->count() > 0 )
-                                @php $i = 0; @endphp
+                                @php $i = 1; @endphp
                                 @foreach($investments as $inv)
                                     <tr>
                                         <td>
                                             <div class="mrg-top-15">
                                                 {{ $i++ }}
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="mrg-top-15">
+                                                <b class="text-dark">{{ $inv->user->first_name }} {{ $inv->user->last_name }}</b>
                                             </div>
                                         </td>
                                         <td>

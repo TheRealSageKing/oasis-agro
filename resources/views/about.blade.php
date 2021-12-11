@@ -220,34 +220,34 @@
                             <figure class="address-icon"><img src="img/master/map.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>ADDRESS</h4>
-                                <p>8273 NW 56th ST Miami, 33195 US</p>
+                                <p>{!! config('app.address') !!}</p>
                             </div>
                         </div>
                         <div class="block-phone d-flex">
                             <figure class="phone-icon"><img src="img/master/phone.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>OFFICE PHONE</h4>
-                                <p>+234 70 6304 9118</p>
-                                <p>+234 70 6836 0519</p>
+                                <p>{!! config('app.phone1') !!}</p>
+                                <p>{!! config('app.phone2') !!}</p>
                             </div>
                         </div>
                         <div class="block-email">
                             <figure class="phone-icon"><img src="img/master/mail.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>EMAIL</h4>
-                                <p>info@oasisagroenterprise.com</p>
+                                <p>{!! config('app.email') !!}</p>
                             </div>
                         </div>
                         <div class="social-networks">
-                            <div class="networks-list"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
-                            <div class="networks-list"><a href="#"><i class="fab fa-twitter"></i></a></div>
-                            <div class="networks-list"><a href="#"><i class="fab fa-instagram"></i></a></div>
-                            <div class="networks-list"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+                            <div class="networks-list"><a href="{!! config('app.socials_fb') !!}"><i class="fab fa-facebook-f"></i></a></div>
+                            <div class="networks-list"><a href="{!! config('app.socials_tw') !!}"><i class="fab fa-twitter"></i></a></div>
+                            <div class="networks-list"><a href="{!! config('app.socials_ig') !!}"><i class="fab fa-instagram"></i></a></div>
+                            <div class="networks-list"><a href="{!! config('app.socials_li') !!}"><i class="fab fa-linkedin-in"></i></a></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 custom-map" data-aos="fade-left">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167616.99483399244!2d-74.08279002518668!3d40.67646407501496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a560db693e3%3A0xb05e8b0bdf854b54!2sGowanus%2C+Brooklyn%2C+Nueva+York%2C+EE.+UU.!5e0!3m2!1ses-419!2sdo!4v1560863423970!5m2!1ses-419!2sdo" class="map-iframe"></iframe>
+                    <iframe src="{!! config('app.map_url') !!}" class="map-iframe"></iframe>
                 </div>
             </div>
             <div class="form-box">

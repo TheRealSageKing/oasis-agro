@@ -28,9 +28,9 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @if (isset($investments) && $investments->count() > 0 )
-                                @php $i = 0; @endphp
-                                @foreach($investments as $inv)
+                            @if (isset($portfolios) && $portfolios->count() > 0 )
+                                @php $i = 1; @endphp
+                                @foreach($portfolios as $portfolio)
                                     <tr>
                                         <td>
                                             <div class="mrg-top-15">
@@ -39,38 +39,38 @@
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <b class="text-dark">{{ $inv->package->name }}</b>
+                                                <b class="text-dark">{{ $portfolio->package->name }}</b>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <b class="text-dark font-size-16">{{ $inv->qty }}</b>
+                                                <b class="text-dark font-size-16">{{ $portfolio->qty }}</b>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <span class="text-dark"><b>{!! config('app.currency') !!}{{ number_format($inv->pkg_amt,2) }}</b></span>
+                                                <span class="text-dark"><b>{!! config('app.currency') !!}{{ number_format($portfolio->pkg_amt,2) }}</b></span>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <span class="text-dark"><b> {{ $inv->duration }}</b></span>
+                                                <span class="text-dark"><b> {{ $portfolio->duration }}</b></span>
                                             </div>
 
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <span>{{ $inv->roi }}%</span>
+                                                <span>{{ $portfolio->roi }}%</span>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <span>{{ $inv->maturity_date->format("m/d/Y")}}</span>
+                                                <span>{{ $portfolio->maturity_date->format("m/d/Y")}}</span>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="relative mrg-top-15">
-                                                @if($inv->is_open)
+                                                @if($portfolio->is_open)
                                                     <span class="status online"> </span>
                                                     <span class="pdd-left-20">Active</span>
                                                 @else
@@ -81,7 +81,7 @@
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <span>{{ $inv->created_at->format("m/d/Y")}}</span>
+                                                <span>{{ $portfolio->created_at->format("m/d/Y")}}</span>
                                             </div>
                                         </td>
                                         <td>

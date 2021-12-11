@@ -5,10 +5,11 @@
 @section('content')
         <x-slider></x-slider>
 
+        <!--HOME ABOUT START--->
         <div class="item-background">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="home-about">
                             <h5>Oasis Agro Enterprise</h5>
                             <h2>About Us</h2>
@@ -17,42 +18,80 @@
                             <div class="btn-more-box"><a class="btn-hover-corner" href="{{ url('about-us') }}">LEARN MORE</a></div>
                         </div>
                     </div>
-                    <div class="col-lg-6 space-break">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="home-icon-box">
-                                    <figure class="icon-pic"><img src="img/master/seeding.png" alt=""></figure>
-                                    <h3>Agro Investments</h3>
-                                    <p>We discover gold mines in agriculture and use the initiative to benefit our investors.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="home-icon-box">
-                                    <figure class="icon-pic"><img src="img/master/cow.png" alt=""></figure>
-                                    <h3>Livestocks</h3>
-                                    <p>We offer complete lifestock production, processing, and distribution to consumers.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="home-icon-box">
-                                    <figure class="icon-pic"><img src="img/master/wheat.png" alt=""></figure>
-                                    <h3>Crop Production & Exportation</h3>
-                                    <p>We specialize in growing healthy crops, process, package and export to consumers and businesses</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="home-icon-box">
-                                    <figure class="icon-pic"><img src="img/master/truck.png" alt=""></figure>
-                                    <h3>Sustainable Development</h3>
-                                    <p>Provide sustainable employment for nigerians.</p>
-                                </div>
-                            </div>
+{{--                    <div class="col-lg-6 space-break">--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-md-6">--}}
+{{--                                <div class="home-icon-box">--}}
+{{--                                    <figure class="icon-pic"><img src="img/master/seeding.png" alt=""></figure>--}}
+{{--                                    <h3>Agro Investments</h3>--}}
+{{--                                    <p>We discover gold mines in agriculture and use the initiative to benefit our investors.</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-md-6">--}}
+{{--                                <div class="home-icon-box">--}}
+{{--                                    <figure class="icon-pic"><img src="img/master/cow.png" alt=""></figure>--}}
+{{--                                    <h3>Livestocks</h3>--}}
+{{--                                    <p>We offer complete lifestock production, processing, and distribution to consumers.</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-md-6">--}}
+{{--                                <div class="home-icon-box">--}}
+{{--                                    <figure class="icon-pic"><img src="img/master/wheat.png" alt=""></figure>--}}
+{{--                                    <h3>Crop Production & Exportation</h3>--}}
+{{--                                    <p>We specialize in growing healthy crops, process, package and export to consumers and businesses</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-md-6">--}}
+{{--                                <div class="home-icon-box">--}}
+{{--                                    <figure class="icon-pic"><img src="img/master/truck.png" alt=""></figure>--}}
+{{--                                    <h3>Sustainable Development</h3>--}}
+{{--                                    <p>Provide sustainable employment for nigerians.</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+                </div>
+            </div>
+        </div>
+        <!--HOME ABOUT END-->
+
+        <!--SERVICES START-->
+        <div class="container">
+            <div class="section-title">
+                <h2>We <span>Grow</span></h2>
+                <p>We specialise in intelligent & effective Search and believes in the power of partnerships to grow business.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="box-services">
+                        <figure class="service-icon"><img src="img/master/seeding.png" alt=""></figure>
+                        <div class="caption">
+                            <h3>Cassava</h3>
+                            <p>Cassava is the third-largest source of food carbohydrates. its a major staple food in the developing world, providing a basic diet for over half a billion people. It is a drought-tolerant crop, capable of growing on marginal soils. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="box-services">
+                        <figure class="service-icon"><img src="img/master/wheat.png" alt=""></figure>
+                        <div class="caption">
+                            <h3>Maize</h3>
+                            <p>Maize is the most important cereal grain in the world, providing nutrients for humans and animals and serving as a basic raw material for the production of starch, alcoholic beverages, food sweeteners and, more recently, fuel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="box-services">
+                        <figure class="service-icon"><img src="img/master/cow.png" alt=""></figure>
+                        <div class="caption">
+                            <h3>Palm Fruits</h3>
+                            <p>Palm oil is a common cooking ingredient in the tropical belt of Africa, Southeast Asia and parts of Brazil. Its use in the commercial food industry is widespread because of its lower cost and the high oxidative stability. </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--HOME ABOUT END-->
+        <!--SERVICES END-->
 
         <!--PRODUCTS START-->
         <div class="container">
@@ -61,62 +100,123 @@
                 <p>For the past 2 years, Oasis Agro Enterprise has been providing excellent agricultural services, without compromising on the quality of our services or products.</p>
             </div>
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="post-list">
                         <a href="#">
                             <figure class="post-preview">
-                                <img src="img/images/blog7.jpg" alt="">
+                                <img src="img/images/garri.jpg" alt="">
                                 <div class="post-overlay"></div>
                             </figure>
                         </a>
                         <div class="post-caption">
-                            <h3>CASSAVA <br><span>(Manihot esculenta)</span></h3>
-                            <p>Cassava is the third-largest source of food carbohydrates. its a major staple food in the developing world, providing a basic diet for over half a billion people. It is a drought-tolerant crop, capable of growing on marginal soils. </p>
+                            <h3>GARRI</h3>
+                            <p>Currently in stock</p>
                             <br>
-                            <h5><a href="{{url('our-products#cassava')}}">Learn More</a></h5>
+                            <h5><a href="{{url('contact-us')}}">PLACE ORDER NOW</a></h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="post-list">
                         <a href="#">
                             <figure class="post-preview">
-                                <img src="img/images/blog8.jpg" alt="">
+                                <img src="img/images/cassava-flour.jpg" alt="">
                                 <div class="post-overlay"></div>
                             </figure>
                         </a>
                         <div class="post-caption">
-                            <h3>Maize <br><span>(Zea mays)</span></h3>
-                            <p>Maize is the most important cereal grain in the world, providing nutrients for humans and animals and serving as a basic raw material for the production of starch, alcoholic beverages, food sweeteners and, more recently, fuel.</p>
+                            <h3>CASSAVA FLOUR</h3>
+                            <p>Currently in stock</p>
                             <br>
-                            <h5><a href="{{url('our-products#maize')}}">Learn More</a></h5>
+                            <h5><a href="{{url('contact-us')}}">PLACE ORDER NOW</a></h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="post-list">
                         <a href="#">
                             <figure class="post-preview">
-                                <img src="img/images/blog9.jpg" alt="">
+                                <img src="img/images/maize-cobs.jpg" alt="">
                                 <div class="post-overlay"></div>
                             </figure>
                         </a>
                         <div class="post-caption">
-                            <h3>PALM OIL <br><span>(Elaeis guineensis)</span></h3>
-                            <p>Palm oil is a common cooking ingredient in the tropical belt of Africa, Southeast Asia and parts of Brazil. Its use in the commercial food industry is widespread because of its lower cost and the high oxidative stability. </p>
+                            <h3>MAIZE COB</h3>
+                            <p>Currently in stock</p>
                             <br>
-                            <h5><a href="{{url('our-products#palm-oil')}}">Learn More</a></h5>
+                            <h5><a href="{{url('contact-us')}}">PLACE ORDER NOW</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="post-list">
+                        <a href="#">
+                            <figure class="post-preview">
+                                <img src="img/images/palm-oil.jpg" alt="">
+                                <div class="post-overlay"></div>
+                            </figure>
+                        </a>
+                        <div class="post-caption">
+                            <h3>PALM OIL</h3>
+                            <p>Currently in stock</p>
+                            <br>
+                            <h5><a href="{{url('contact-us')}}">PLACE ORDER NOW</a></h5>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="btn-more-box">
-                    <a class="btn-hover-corner" href="{{ url('our-products') }}">LEARN MORE</a>
+{{--            <div class="row justify-content-center">--}}
+{{--                <div class="btn-more-box">--}}
+{{--                    <a class="btn-hover-corner" href="{{ url('our-products') }}">LEARN MORE</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+        </div>
+        <!--PRODUCTS END-->
+
+        <!--INVESTMENTS START-->
+        <div class="container">
+            <div class="section-title">
+                <h2>Our <span>Investments</span></h2>
+                <p>We are committed to ensuring that our clients and partners are satisfied with our services, and we are passionate about our mission statement</p>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="order-last order-md-4 col-lg-4 space-break">
+                            <div class="product-box-img">
+                                <figure class="product-media"><img src="img/images/cassava-investment.jpg" alt=""></figure>
+                            </div>
+                        </div>
+                        <div class="order-first order-md-8 col-lg-8">
+                            <div class="product-info">
+                                <h2>CASSAVA INVESTMENT</h2>
+                                <p>Cassava is the third-largest source of food carbohydrates in the tropics, after rice and maize. </p>
+                                <p>With our Cassava investment package, we relieve you of the labour that comes with managing, marketing, selling and distribution of your cassava crops, and ensure efficient farming practices that will guarantee maximum returns.</p>
+                                <div class="btn-more-box"><a class="btn-hover-corner" href="{{ url('our-products/cassava') }}">FIND OUT HOW</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="order-last order-md-4 col-lg-4 space-break">
+                            <div class="product-box-img">
+                                <figure class="product-media"><img src="img/images/palm-oil.jpg" alt=""></figure>
+                            </div>
+                        </div>
+                        <div class="order-first order-md-8 col-lg-8">
+                            <div class="product-info">
+                                <h2>PALM OIL INVESTMENT</h2>
+                                <p>Palm oil is a common cooking ingredient in the tropical belt of Africa, Southeast Asia and parts of Brazil.</p>
+                                <p>With our Palm Oil investment package, you will be taking advantage of market trends and fluctuations, while we assist you with the necessary management and storage procedures for your products to ensure that we deliver maximum returns to you.</p>
+                                <div class="btn-more-box"><a class="btn-hover-corner" href="{{ url('our-products/palm-oil') }}">FIND OUT HOW</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--PRODUCTS END-->
+        <!--INVESTMENTS END-->
 
 
         <!--WHY US START-->
@@ -189,32 +289,32 @@
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="inner-counter">
                             <div class="counter-statistics">
-                                <div class="counter">12001</div>
-                                <h5>CULTIVATED YARDS</h5>
+                                <div class="counter">36</div>
+                                <h5>STAFF STRENGTH</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="inner-counter">
                             <div class="counter-statistics">
-                                <div class="counter">1455</div>
-                                <h5>Happy Customers</h5>
+                                <div class="counter">105</div>
+                                <h5>PLOTS OF FARMLAND</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="inner-counter">
                             <div class="counter-statistics">
-                                <div class="counter">233</div>
-                                <h5>Company Awards</h5>
+                                <div class="counter">117</div>
+                                <h5>REGISTERED INVESTORS</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="inner-counter last-box-counter">
                             <div class="counter-statistics">
-                                <div class="counter">25</div>
-                                <h5>Years Of Experience</h5>
+                                <div class="counter">450</div>
+                                <h5>HEALTHY PALM STANDS</h5>
                             </div>
                         </div>
                     </div>
@@ -235,34 +335,34 @@
                             <figure class="address-icon"><img src="img/master/map.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>ADDRESS</h4>
-                                <p>8273 NW 56th ST Miami, 33195 US</p>
+                                <p>{!! config('app.address') !!}</p>
                             </div>
                         </div>
                         <div class="block-phone d-flex">
                             <figure class="phone-icon"><img src="img/master/phone.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>OFFICE PHONE</h4>
-                                <p>+234 70 6304 9118</p>
-                                <p>+234 70 6836 0519</p>
+                                <p>{!! config('app.phone1') !!}</p>
+                                <p>{!! config('app.phone2') !!}</p>
                             </div>
                         </div>
                         <div class="block-email">
                             <figure class="phone-icon"><img src="img/master/mail.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>EMAIL</h4>
-                                <p>info@oasisagroenterprise.com</p>
+                                <p>{!! config('app.email') !!}</p>
                             </div>
                         </div>
                         <div class="social-networks">
-                            <div class="networks-list"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
-                            <div class="networks-list"><a href="#"><i class="fab fa-twitter"></i></a></div>
-                            <div class="networks-list"><a href="#"><i class="fab fa-instagram"></i></a></div>
-                            <div class="networks-list"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+                            <div class="networks-list"><a href="{!! config('app.socials_fb') !!}"><i class="fab fa-facebook-f"></i></a></div>
+                            <div class="networks-list"><a href="{!! config('app.socials_tw') !!}"><i class="fab fa-twitter"></i></a></div>
+                            <div class="networks-list"><a href="{!! config('app.socials_ig') !!}"><i class="fab fa-instagram"></i></a></div>
+                            <div class="networks-list"><a href="{!! config('app.socials_li') !!}"><i class="fab fa-linkedin-in"></i></a></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 custom-map" data-aos="fade-left">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167616.99483399244!2d-74.08279002518668!3d40.67646407501496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a560db693e3%3A0xb05e8b0bdf854b54!2sGowanus%2C+Brooklyn%2C+Nueva+York%2C+EE.+UU.!5e0!3m2!1ses-419!2sdo!4v1560863423970!5m2!1ses-419!2sdo" class="map-iframe"></iframe>
+                    <iframe src="{!! config('app.map_url') !!}" class="map-iframe"></iframe>
                 </div>
             </div>
             <div class="form-box">
@@ -345,3 +445,4 @@
         });
     </script>
 @endsection
+
