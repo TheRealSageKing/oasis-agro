@@ -10,6 +10,12 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-lg-12">
+                    <p class="alert alert-info">
+                        You can drop your contact and purchase information below and we will
+                        reach out to you
+                    </p>
+                </div>
                 <!--CONTACT INFORMATION START-->
                 <div class="col-lg-6">
                     <div class="contact-info">
@@ -19,7 +25,7 @@
                             <figure class="address-icon"><img src="img/master/map.png" alt=""></figure>
                             <div class="inner-info">
                                 <h4>ADDRESS</h4>
-                                <p>8273 NW 56th ST Miami, 33195 US</p>
+                                <p>{!! config('app.address') !!}</p>
                             </div>
                         </div>
                         <div class="block-phone d-flex">
@@ -95,7 +101,7 @@
 
         <!--MAP START-->
         <div class="container-fluid map-wide">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167616.99483399244!2d-74.08279002518668!3d40.67646407501496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a560db693e3%3A0xb05e8b0bdf854b54!2sGowanus%2C+Brooklyn%2C+Nueva+York%2C+EE.+UU.!5e0!3m2!1ses-419!2sdo!4v1560863423970!5m2!1ses-419!2sdo" class="map-iframe"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.0810215226761!2d7.001701529192118!3d5.367441934981228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10425de38fbad901%3A0x8f73e8c0be00f140!2s460115%2C%20Eziobodo!5e0!3m2!1sen!2sng!4v1639226240165!5m2!1sen!2sng" class="map-iframe"></iframe>
         </div>
         <!--MAP END-->
 

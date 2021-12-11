@@ -19,7 +19,7 @@ return [
     'phone2' => env('PHONE1', '+ 234 70 6304 9118'),
     'address' => env('ADDRESS', 'Futo road, Umuayo,Eziobodo , Imo state'),
     'email' => env('EMAIL', 'info@oasisagroenterprise.com'),
-    'map_url' => env('MAP_URL', 'https://www.google.com/maps/search/Futo+road,+Umuayo,Eziobodo+,+Imo+state/@5.4005516,6.9790784,15z'),
+    'map_url' => env('MAP_URL', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.0810215226761!2d7.001701529192118!3d5.367441934981228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10425de38fbad901%3A0x8f73e8c0be00f140!2s460115%2C%20Eziobodo!5e0!3m2!1sen!2sng!4v1639226240165!5m2!1sen!2sng'),
     'socials_fb' => env('SOCIALS_FB', 'info@oasisagroenterprise.com'),
     'socials_tw' => env('SOCIALS_TW', 'info@oasisagroenterprise.com'),
     'socials_ig' => env('SOCIALS_IG', 'info@oasisagroenterprise.com'),
