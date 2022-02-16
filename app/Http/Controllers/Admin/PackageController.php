@@ -52,8 +52,8 @@ class PackageController extends Controller
                 $brochureFile = $this->uploadFile($request->file('package_brochure'), 'brochures');
                 $packageBrochureName = $brochureFile['name'];
                 $packageBrochurePath = asset($brochureFile['path']);
-
             }
+
             Package::create([
                 'name'          => $validated['package_name'],
                 'duration'      => $validated['package_duration'],

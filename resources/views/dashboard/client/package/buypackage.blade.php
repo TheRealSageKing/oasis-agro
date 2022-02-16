@@ -1,4 +1,4 @@
-@extends('layouts.backend-admin')
+@extends('layouts.backend-client')
 
 @section('title', 'Packages')
 

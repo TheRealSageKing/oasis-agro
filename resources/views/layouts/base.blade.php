@@ -113,6 +113,61 @@
     <!--NAVIGATION END-->
 </header>
 @yield('content')
+
+<div class="modal fade" id="default-modal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="row no-gutters">
+                <div class="col-md-6 d-flex">
+                    <div class="modal-body p-5 img d-flex" style="background-image: url('http://oasis.test/img/images/cucumber.jpg');">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="modal-body p-5 d-flex align-items-center">
+                        <form id="dope-contact-form-2" method="post">
+                            @csrf
+                            <div class="messages"></div>
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input id="form_name" type="text" name="name" class="form-control customize" placeholder="Name" required="required" data-error="Firstname is required.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input id="form_email" type="email" name="email" class="form-control customize" placeholder="Email address" required="required" data-error="Valid email is required.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input id="form_phone" type="tel" name="phone_number" class="form-control customize" placeholder="Please enter your phone">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea id="form_message" name="message" class="form-control customize" placeholder="How did you hear about us" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p><button type="submit" class="btn btn-custom" id="submit-btn-2">Send message</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <footer>
     <div class="container">
         <div class="row">
@@ -128,12 +183,12 @@
             <div class="col-lg-3 footer-center-col">
                 <h4>FIND US</h4>
                 <div class="location">
-                    <p>Adddres:  {!!  config('app.address') !!}</p>
+                    <p>Address:  {!!  config('app.address') !!}</p>
                     <div class="d-flex">
                         <p>Phone: </p>
                         <div>
                             <p>{!! config('app.phone1') !!}</p>
-                            <p>{!! config('app.phone2') !!}</p>
+{{--                            <p>{!! config('app.phone2') !!}</p>--}}
                         </div>
                     </div>
                     <p>Email: {!! strtoupper(config('app.email')) !!}</p>
@@ -142,7 +197,7 @@
             <div class="col-lg-4 footer-col-right">
                 <h4>NEWSLETTER</h4>
                 <div class="newsletter-box">
-                    <p>Suscribe to our newsletter and get the lastest scoop right to your inbox!</p>
+                    <p>Subscribe to our newsletter and get the latest scoop right to your inbox!</p>
                     <form  action="#" method="post" name="sign-up">
                         <input type="email" class="input" id="email" name="email" placeholder="Your email address" required>
                         <input type="submit" class="button" id="submit" value="SIGN UP">
@@ -169,7 +224,14 @@ JAVASCRIPTS
 <script src="{{ asset('js/util.js') }}"></script>
 <script src="{{ asset('js/swipe-content.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
-
+<script>
+    setTimeout(function() {
+        $('#default-modal').modal({
+            'show':true,
+            'backdrop':'static'
+        });
+    }, 2000);
+</script>
 
 @yield('scripts')
 

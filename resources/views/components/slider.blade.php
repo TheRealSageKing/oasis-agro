@@ -11,21 +11,21 @@
             <div class="carousel-item active" style="background-image: url('img/images/slider-bg-1.jpg')">
                 <div class="carousel-caption">
                     <h2 class="display-4 animated fadeInLeft">Cultivating <br><span>Growing Ideas</span></h2>
-                    <p class="lead animated fadeInRight">Long established fact that a reader will be distracted by the readable content</p>
+                    <p class="lead animated fadeInRight">We aim at actively contributing to the sustainable development of food production.</p>
                 </div>
             </div>
             <!-- Slide Two - Set the background image for this slide in the line below -->
             <div class="carousel-item" style="background-image: url('img/images/slider-bg-3.jpg')">
                 <div class="carousel-caption">
-                    <h2 class="display-4 animated fadeInLeft">Farmer <br> <span>feeding the world</span></h2>
-                    <p class="lead animated fadeInRight">Long established fact that a reader will be distracted by the readable content</p>
+                    <h2 class="display-4 animated fadeInLeft">Oasis Agro <br> <span>feeding the world</span></h2>
+                    <p class="lead animated fadeInRight">A fast growing Agro business and farm in Nigeria providing agricultural investment solutions for everyone</p>
                 </div>
             </div>
             <!-- Slide Three - Set the background image for this slide in the line below -->
             <div class="carousel-item" style="background-image: url('img/images/slider-bg-2.jpg')">
                 <div class="carousel-caption">
                     <h2 class="display-4 animated fadeInLeft">Finest Products <br> <span>For Agriculture </span></h2>
-                    <p class="lead animated fadeInRight">Long established fact that a reader will be distracted by the readable content</p>
+                    <p class="lead animated fadeInRight">Agricultural investment has never been this easy with us.</p>
                 </div>
             </div>
         </div>

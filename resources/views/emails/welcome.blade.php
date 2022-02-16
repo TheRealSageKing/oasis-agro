@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Notification of Investment</title>
+    <title>Welcome to oasis agro enterprise</title>
     <style>
         /* -------------------------------------
             GLOBAL RESETS
@@ -348,15 +348,19 @@
                             <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td>
-                                        <p>Hello {{ $investor['name'] }},</p>
-                                       <br>
-                                        <p>You just bought an investment package with oasis agro enterprise. Please see below for details</p>
-                                        <br>
-                                        <p>Package name: {{ $investment['package_name'] }}</p>
-                                        <p>Invested amount: {!! config('app.currency') !!}{{ $investment['principal'] }}</p>
-                                        <p>Duration: {{ $investment['duration'] }}</p>
-                                        <p>Maturity date: {{ $investment['maturity_date'] }}</p>
-                                        <p>Return on Investment: {{ $investment['roi'] }}</p>
+                                        <p>Hi there,</p>
+                                        <p>We're glad you're here.
+                                            As co-founder and CEO at Oasis Agro Enterprise ,
+                                            I'd like to personally welcome you aboard. </p>
+                                        <p>
+                                            You've taken the first step to becoming a part of the Oasis
+                                            Agro Enterprise investors community. We appreciate you,
+                                            as we assure you of transparency, accountability,
+                                            quality service delivery and efficient management of your investment to maximize your investment return.
+                                        </p>
+                                        <p>Thanks for choosing us to help grow your investment.</p>
+                                        <p>Yours truly,</p>
+                                        <p>Faith & Team Oasis</p>
                                     </td>
                                 </tr>
                             </table>

@@ -1,14 +1,62 @@
 @extends('layouts.backend-client')
 
-@section('title', 'Portfolio')
+@section('title', 'Investment Details')
 
 @section('content')
     <div class="page-title">
-        <h4>My Portfolio</h4>
+        <h4>{{ $investment->package->name }}</h4>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            @if(session()->has('error'))
+                <div class="alert alert-danger">
+                    {{ session()->get('error') }}
+                </div>
+            @endif
+            @if(session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
+        </div>
     </div>
     <div class="row">
 
-        <div class="col-md-12">
+        <div class="col-md-4 col-xs-12">
+            <div class="card">
+                <img class="card-img-top" src="{{ $investment->package->image ? $investment->package->image: 'https://picsum.photos/200/150/?random' }}">
+                <div class="card-block">
+                    <h4 class="card-title">{{ $investment->package->name }}</h4>
+                    <div class="meta">
+                        <ul class="list-unstyled">
+                            <li>
+                                <p>ROI: {{ $investment->package->roi }}%</p>
+                            </li>
+                            <li>
+                                <p>Principal: {!! config('app.currency') !!}{{ number_format($investment->pkg_amt * $investment->qty) }}</p>
+                            </li>
+                            <li>
+                                <p>Returns: {!! config('app.currency') !!}{{ number_format(($investment->pkg_amt * $investment->qty) * (1 + ($investment->roi / 100))) }}</p>
+                            </li>
+                            <li>
+                                <p>Duration: {{ $investment->duration }} days</p>
+                            </li>
+                            <li>
+                                <p>Created Date: {{ $investment->created_at->format("m/d/Y") }}</p>
+                            </li>
+                            <li>
+                                <p>Maturity Date: {{ $investment->maturity_date->format("m/d/Y") }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-text">
+                        {{ $investment->package->description }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-8 col-xs-12">
             <div class="card">
                 <div class="card-block">
                     <div class="table-overflow">
@@ -16,21 +64,16 @@
                             <thead>
                             <tr>
                                 <th>S/N</th>
-                                <th>Name</th>
-                                <th>Quantity</th>
+                                <th>Subject</th>
                                 <th>Amount</th>
-                                <th>Duration</th>
-                                <th>ROI</th>
-                                <th>Maturity Date</th>
                                 <th>Status</th>
                                 <th>Created Date</th>
-                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
-                            @if (isset($portfolios) && $portfolios->count() > 0 )
+                            @if (isset($investment->investment_histories) && $investment->investment_histories->count() > 0 )
                                 @php $i = 1; @endphp
-                                @foreach($portfolios as $portfolio)
+                                @foreach($investment->investment_histories as $history)
                                     <tr>
                                         <td>
                                             <div class="mrg-top-15">
@@ -39,58 +82,23 @@
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <b class="text-dark">
-                                                    <a href="{{ route('client.investments.detail', $portfolio->id) }}">{{ $portfolio->package->name }}</a>
-                                                </b>
+                                                <b class="text-dark"> Interest paid</b>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <b class="text-dark font-size-16">{{ $portfolio->qty }}</b>
+                                                <b class="text-dark font-size-16">{{ $history->amount_paid }}</b>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <span class="text-dark"><b>{!! config('app.currency') !!}{{ number_format($portfolio->pkg_amt,2) }}</b></span>
+                                                <span class="text-dark"><b>paid</b></span>
                                             </div>
                                         </td>
-                                        <td>
-                                            <div class="mrg-top-15">
-                                                <span class="text-dark"><b> {{ $portfolio->duration }}</b></span>
-                                            </div>
 
-                                        </td>
                                         <td>
                                             <div class="mrg-top-15">
-                                                <span>{{ $portfolio->roi }}%</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="mrg-top-15">
-                                                <span>{{ $portfolio->maturity_date->format("m/d/Y")}}</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="relative mrg-top-15">
-                                                @if($portfolio->is_open)
-                                                    <span class="status online"> </span>
-                                                    <span class="pdd-left-20">Active</span>
-                                                @else
-                                                    <span class="status offline"> </span>
-                                                    <span class="pdd-left-20">Inactive</span>
-                                                @endif
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="mrg-top-15">
-                                                <span>{{ $portfolio->created_at->format("m/d/Y")}}</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="mrg-top-10 text-center">
-                                                <button class="btn btn-icon btn-flat btn-rounded dropdown-toggle">
-                                                    <i class="ti-more-alt"></i>
-                                                </button>
+                                                <span>{{ $history->created_at ? $history->created_at->format("m/d/Y") : '' }}</span>
                                             </div>
                                         </td>
                                     </tr>
@@ -99,7 +107,7 @@
                                 <tr>
                                     <td colspan="9">
                                         <div class="mrg-top-15 text-center">
-                                            <b class="text-dark">No portfolio available at the moment</b>
+                                            <b class="text-dark">Patience.. your interests will roll in soon</b>
                                         </div>
                                     </td>
                                 </tr>

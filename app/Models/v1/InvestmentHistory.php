@@ -9,6 +9,7 @@ class InvestmentHistory extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    protected $dates= ['created_at','updated_at'];
 
     public function Investment()
     {

@@ -14,7 +14,7 @@ class PortfolioController extends Controller
     {
         $currentUser = Auth::user();
         $user = User::find($currentUser->id);
-        $portfolios = $user->investments;
+        $portfolios = Investment::with('package')->where('user_id', $user->id)->get();
 
         return view('dashboard.client.portfolio.index', compact('portfolios'));
     }

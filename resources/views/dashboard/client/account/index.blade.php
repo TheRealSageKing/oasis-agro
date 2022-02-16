@@ -26,7 +26,7 @@
                 </div>
                 <div class="card-block">
 
-                    <form action="{{ route('admin.account.update') }}" method="post" id="xform">
+                    <form action="{{ route('client.account.update') }}" method="post" id="xform">
                         @csrf
                         <div class="form-group">
                             <input type="email" class="form-control" placeholder="Email Address" name="email" id="email" readonly  value="{{ $user->email ?? old('email')  }}" />

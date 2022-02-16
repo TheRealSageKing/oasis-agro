@@ -27,6 +27,7 @@
     <link href="{{ asset('assets/css/toastr.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/backend-app.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -129,7 +130,7 @@
                     <ul class="nav-right">
                         <li class="user-profile dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img class="profile-img img-fluid" src="{{ asset('assets/images/user.jpg') }}" alt="">
+                                <img class="profile-img img-fluid" data-name="{{ Auth::user()->first_name }}" alt="">
                                 <div class="user-info">
                                     <span class="name pdd-right-5">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
                                     <i class="ti-angle-down font-size-10"></i>
@@ -137,29 +138,21 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="#">
-                                        <i class="ti-settings pdd-right-10"></i>
-                                        <span>Setting</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
+                                    <a href="{{ route('client.account.index') }}">
                                         <i class="ti-user pdd-right-10"></i>
                                         <span>Profile</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="ti-email pdd-right-10"></i>
-                                        <span>Inbox</span>
-                                    </a>
-                                </li>
+
                                 <li role="separator" class="divider"></li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class="ti-power-off pdd-right-10"></i>
                                         <span>Logout</span>
                                     </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
                                 </li>
                             </ul>
                         </li>
@@ -175,7 +168,7 @@
                 </div>
                 <div class="modal slide-in-right modal-right fade" id="side-modal-r">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content">
+                        <div class="modal-content stretch-modal">
                             @yield('side-modal-content')
                         </div>
                     </div>
@@ -216,6 +209,10 @@
 <script src="{{ mix('js/app.js') }}"></script>
 <!-- page plugins js -->
 <script src="{{ asset('assets/js/app.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/initial-js@0.3.4/dist/initial.min.js"></script>
+<script>
+    $('.profile-img').initial();
+</script>
 
 <!-- page js -->
 {{--<script src="{{ asset('assets/js/dashboard/dashboard.js') }}"></script>--}}

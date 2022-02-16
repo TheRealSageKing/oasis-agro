@@ -20,17 +20,17 @@
                     </div>
                 </div>
                 <div class="col-lg-6 space-break">
-                    <figure class="about-pic"><img src="img/images/img1.jpg" alt=""></figure>
+                    <figure class="about-pic"><img src=" {{ url('img/images/invest-with-us.jpg') }}" alt=""></figure>
                 </div>
             </div>
             <hr class="divider">
 
             <div class="services-bar space-break">
                 <div class="row">
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-4">
                         <div class="inner-service-bar d-flex">
                             <div class="flex-grow-lg-1">
-                            <figure class="about-service-icon"><img src="img/master/seeding.png" alt=""></figure>
+                            <figure class="about-service-icon"><img src=" {{ url('img/master/seeding.png') }}" alt=""></figure>
                             </div>
                             <div class="caption">
                                 <h3>Agro Investments</h3>
@@ -38,10 +38,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-4">
                         <div class="inner-service-bar mobil-breakpoint d-flex">
                             <div class="flex-grow-lg-1">
-                            <figure class="about-service-icon"><img src="img/master/wheat.png" alt=""></figure>
+                            <figure class="about-service-icon"><img src=" {{ url('img/master/wheat.png') }}" alt=""></figure>
                             </div>
                             <div class="caption">
                                 <h3>Crop Production & Exportation</h3>
@@ -49,10 +49,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-4">
                         <div class="inner-service-bar tablet-breakpoint d-flex">
                             <div class="flex-grow-lg-1">
-                            <figure class="about-service-icon"><img src="img/master/truck.png" alt=""></figure>
+                            <figure class="about-service-icon"><img src=" {{ url('img/master/truck.png') }}" alt=""></figure>
                             </div>
                             <div class="caption">
                                 <h3>Sustainable Development</h3>
@@ -60,90 +60,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="inner-service-bar tablet-breakpoint d-flex">
-                            <div class="flex-grow-lg-1">
-                                <figure class="about-service-icon"><img src="img/master/cow.png" alt=""></figure>
-                            </div>
-                            <div class="caption">
-                                <h3>Livestocks</h3>
-                                <p>We offer complete lifestock production, processing, and distribution to consumers.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
         <!--ABOUT US SECTION END-->
-
-        <!--TEAM START-->
-{{--        <div class="container-fluid inner-color">--}}
-{{--            <div class="container">--}}
-{{--                <div class="section-title">--}}
-{{--                    <h2>Our <span>Team</span></h2>--}}
-{{--                    <p>We specialise in intelligent & effective Search and believes in the power of partnerships to grow business.</p>--}}
-{{--                </div>--}}
-{{--                <div class="team-carousel slider hover-effects image-hover">--}}
-{{--                    <div class="slide" data-aos="fade-up">--}}
-{{--                        <div class="team-thumb">--}}
-{{--                            <figure class="member-headshot"><img src="img/images/farmer1.jpg" alt=""></figure>--}}
-{{--                            <div class="member-social">--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>--}}
-{{--                            </div>--}}
-{{--                            <div class="team-caption">--}}
-{{--                                <h3>Bryan Smith</h3>--}}
-{{--                                <p>Stocker</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="slide" data-aos="fade-up">--}}
-{{--                        <div class="team-thumb">--}}
-{{--                            <figure class="member-headshot"><img src="img/images/farmer2.jpg" alt=""></figure>--}}
-{{--                            <div class="member-social">--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>--}}
-{{--                            </div>--}}
-{{--                            <div class="team-caption">--}}
-{{--                                <h3>Sara Jones</h3>--}}
-{{--                                <p>Food Production</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="slide" data-aos="fade-up">--}}
-{{--                        <div class="team-thumb">--}}
-{{--                            <figure class="member-headshot"><img src="img/images/farmer3.jpg" alt=""></figure>--}}
-{{--                            <div class="member-social">--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>--}}
-{{--                            </div>--}}
-{{--                            <div class="team-caption">--}}
-{{--                                <h3>Tim Douglas</h3>--}}
-{{--                                <p>Laborer</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="slide" data-aos="fade-up">--}}
-{{--                        <div class="team-thumb">--}}
-{{--                            <figure class="member-headshot"><img src="img/images/farmer4.jpg" alt=""></figure>--}}
-{{--                            <div class="member-social">--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-linkedin-in"></i></div></a></div>--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-facebook-f"></i></div></a></div>--}}
-{{--                                <div class="social-items"><a href="#"><div class="icon-fa"><i class="fab fa-twitter"></i></div></a></div>--}}
-{{--                            </div>--}}
-{{--                            <div class="team-caption">--}}
-{{--                                <h3>Robert Thomson</h3>--}}
-{{--                                <p>Warehouse</p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-        <!--TEAM END-->
 
         <!--WHY US START-->
         <div class="container">
@@ -160,7 +80,7 @@
                 </div>
                 <div class="col-lg-4 space-break">
                     <div class="about-col">
-                        <figure class="mission-thumb"><img src="img/images/img2.jpg" alt=""></figure>
+                        <figure class="mission-thumb"><img src=" {{ url('img/images/img2.jpg') }}" alt=""></figure>
                         <div class="caption">
                             <h3>Our Mission</h3>
                             <p>Our mission is to actively contribute to the sustainable development of food production in Nigeria by reducing food imports and increasing food exports.</p>
@@ -169,7 +89,7 @@
                 </div>
                 <div class="col-lg-4 space-break">
                     <div class="about-col">
-                        <figure class="vision-thumb"><img src="img/images/img3.jpg" alt=""></figure>
+                        <figure class="vision-thumb"><img src=" {{ url('img/images/cucumber.jpg') }}" alt=""></figure>
                         <div class="caption">
                             <h3>Our Vision</h3>
                             <p>Our vision is to actively actively engage Nigerian youths in embracing agriculture as a golden opportunity in the fight against poverty.</p>
@@ -188,22 +108,22 @@
             </div>
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">
-                    <figure class="partners-logo"><img src="img/images/client-1.png" alt=""></figure>
+                    <figure class="partners-logo"><img src=" {{ url('img/images/client-1.png') }}" alt=""></figure>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">
-                    <figure class="partners-logo"><img src="img/images/client-5.png" alt=""></figure>
+                    <figure class="partners-logo"><img src=" {{ url('img/images/client-5.png') }}" alt=""></figure>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">
-                    <figure class="partners-logo"><img src="img/images/client-3.png" alt=""></figure>
+                    <figure class="partners-logo"><img src=" {{ url('img/images/client-3.png') }}" alt=""></figure>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <figure class="partners-logo"><img src="img/images/client-7.png" alt=""></figure>
+                    <figure class="partners-logo"><img src=" {{ url('img/images/client-7.png') }}" alt=""></figure>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <figure class="partners-logo"><img src="img/images/client-2.png" alt=""></figure>
+                    <figure class="partners-logo"><img src=" {{ url('img/images/client-2.png') }}" alt=""></figure>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                    <figure class="partners-logo"><img src="img/images/client-6.png" alt=""></figure>
+                    <figure class="partners-logo"><img src=" {{ url('img/images/client-6.png') }}" alt=""></figure>
                 </div>
             </div>
         </div>
@@ -217,14 +137,14 @@
                         <p>Get In Touch</p>
                         <h2>Contact Us</h2>
                         <div class="block-address">
-                            <figure class="address-icon"><img src="img/master/map.png" alt=""></figure>
+                            <figure class="address-icon"><img src=" {{ url('img/master/map.png') }}" alt=""></figure>
                             <div class="inner-info">
                                 <h4>ADDRESS</h4>
                                 <p>{!! config('app.address') !!}</p>
                             </div>
                         </div>
                         <div class="block-phone d-flex">
-                            <figure class="phone-icon"><img src="img/master/phone.png" alt=""></figure>
+                            <figure class="phone-icon"><img src=" {{ url('img/master/phone.png') }}" alt=""></figure>
                             <div class="inner-info">
                                 <h4>OFFICE PHONE</h4>
                                 <p>{!! config('app.phone1') !!}</p>
@@ -232,7 +152,7 @@
                             </div>
                         </div>
                         <div class="block-email">
-                            <figure class="phone-icon"><img src="img/master/mail.png" alt=""></figure>
+                            <figure class="phone-icon"><img src=" {{ url('img/master/mail.png') }}" alt=""></figure>
                             <div class="inner-info">
                                 <h4>EMAIL</h4>
                                 <p>{!! config('app.email') !!}</p>

@@ -22,8 +22,8 @@ class NotifyInvestorOfNewInvestment extends Mailable
      */
     public function __construct($investorDetails, $investmentDetails)
     {
-        $this->investmentDetails = $investmentDetails;
         $this->investorDetails = $investorDetails;
+        $this->investmentDetails = $investmentDetails;
     }
 
     /**
@@ -34,8 +34,8 @@ class NotifyInvestorOfNewInvestment extends Mailable
     public function build()
     {
         return $this->subject('Notification of Investment')->view('emails.new-investment-email', [
-            'investmentDetails' => $this->investmentDetails,
-            'investorDetails' => $this->investorDetails
+            'investment' => $this->investmentDetails,
+            'investor' => $this->investorDetails
         ]);
     }
 }

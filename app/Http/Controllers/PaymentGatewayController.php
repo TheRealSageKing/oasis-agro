@@ -74,7 +74,7 @@ class PaymentGatewayController extends Controller
                 'is_open' => 1,
                 'maturity_date' => $maturityDate,
             ]);
-
+            $investment->refresh();
 
             User::where('id', $currentUser->id)->update([
                 'ledger' => $currentUser->ledger + $paidAmt
@@ -83,8 +83,16 @@ class PaymentGatewayController extends Controller
             DB::commit();
 
             //Email user of succesful investment here and details of investment.
-            Mail::to($currentUser->email)->send(new NotifyInvestorOfNewInvestment($currentUser, $investment));
-            return redirect()->route('client.investments.index')->with('success', 'Payment was successful');
+            Mail::to($currentUser->email)->send(new NotifyInvestorOfNewInvestment([
+                'name'=>$currentUser->first_name. ' '.$currentUser->last_name
+            ], [
+                'package_name' => $investment->package->name,
+                'duration' => $investment->duration,
+                'roi' => $investment->roi,
+                'maturity_date' => $investment->maturity_date,
+                'principal' => $package->amount * $investment->qty,
+            ]));
+            return redirect()->route('client.investments.detail', ['investment' => $investment])->with('success', 'Payment was successful');
 
         }catch (\Exception $ex)
         {

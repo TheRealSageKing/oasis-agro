@@ -9,47 +9,18 @@
         <div class="item-background">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <div class="home-about">
                             <h5>Oasis Agro Enterprise</h5>
-                            <h2>About Us</h2>
+                            <h2>Why we are here</h2>
                             <p>Oasis Agro Enterprise is a rapidly expanding Agro business and farm in Nigeria that specializes in cultivating nutritious food crops, manufacturing and packing food products in the most sanitary conditions, and storing and supplying them to consumers, clients, and business owners for consumption.</p>
                             <p>Oasis Agro Enterprise has been offering exceptional agricultural services for the past two years, without sacrificing the quality of our services or products. We intend to expand and increase production while also investing in the most cutting-edge agricultural technologies.</p>
                             <div class="btn-more-box"><a class="btn-hover-corner" href="{{ url('about-us') }}">LEARN MORE</a></div>
                         </div>
                     </div>
-{{--                    <div class="col-lg-6 space-break">--}}
-{{--                        <div class="row">--}}
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="home-icon-box">--}}
-{{--                                    <figure class="icon-pic"><img src="img/master/seeding.png" alt=""></figure>--}}
-{{--                                    <h3>Agro Investments</h3>--}}
-{{--                                    <p>We discover gold mines in agriculture and use the initiative to benefit our investors.</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="home-icon-box">--}}
-{{--                                    <figure class="icon-pic"><img src="img/master/cow.png" alt=""></figure>--}}
-{{--                                    <h3>Livestocks</h3>--}}
-{{--                                    <p>We offer complete lifestock production, processing, and distribution to consumers.</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="home-icon-box">--}}
-{{--                                    <figure class="icon-pic"><img src="img/master/wheat.png" alt=""></figure>--}}
-{{--                                    <h3>Crop Production & Exportation</h3>--}}
-{{--                                    <p>We specialize in growing healthy crops, process, package and export to consumers and businesses</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="home-icon-box">--}}
-{{--                                    <figure class="icon-pic"><img src="img/master/truck.png" alt=""></figure>--}}
-{{--                                    <h3>Sustainable Development</h3>--}}
-{{--                                    <p>Provide sustainable employment for nigerians.</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <div class="col-lg-6 space-break">
+                        <figure class="about-pic"><img src="{{ url('img/images/oasis.jpg') }}" alt=""></figure>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,7 +35,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4">
                     <div class="box-services">
-                        <figure class="service-icon"><img src="img/master/seeding.png" alt=""></figure>
+                        <figure class="service-icon"><img src="{{ url('img/master/seeding.png') }}" alt=""></figure>
                         <div class="caption">
                             <h3>Cassava</h3>
                             <p>Cassava is the third-largest source of food carbohydrates. its a major staple food in the developing world, providing a basic diet for over half a billion people. It is a drought-tolerant crop, capable of growing on marginal soils. </p>
@@ -73,7 +44,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="box-services">
-                        <figure class="service-icon"><img src="img/master/wheat.png" alt=""></figure>
+                        <figure class="service-icon"><img src="{{ url('img/master/wheat.png') }}" alt=""></figure>
                         <div class="caption">
                             <h3>Maize</h3>
                             <p>Maize is the most important cereal grain in the world, providing nutrients for humans and animals and serving as a basic raw material for the production of starch, alcoholic beverages, food sweeteners and, more recently, fuel.</p>
@@ -82,7 +53,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="box-services">
-                        <figure class="service-icon"><img src="img/master/cow.png" alt=""></figure>
+                        <figure class="service-icon"><img src="{{ url('img/master/cow.png') }}" alt=""></figure>
                         <div class="caption">
                             <h3>Palm Fruits</h3>
                             <p>Palm oil is a common cooking ingredient in the tropical belt of Africa, Southeast Asia and parts of Brazil. Its use in the commercial food industry is widespread because of its lower cost and the high oxidative stability. </p>
@@ -104,7 +75,7 @@
                     <div class="post-list">
                         <a href="#">
                             <figure class="post-preview">
-                                <img src="img/images/garri.jpg" alt="">
+                                <img src="{{ url('img/images/garri.jpg') }}" alt="">
                                 <div class="post-overlay"></div>
                             </figure>
                         </a>
@@ -120,7 +91,7 @@
                     <div class="post-list">
                         <a href="#">
                             <figure class="post-preview">
-                                <img src="img/images/cassava-flour.jpg" alt="">
+                                <img src="{{ url('img/images/cassava-flour.jpg') }}" alt="">
                                 <div class="post-overlay"></div>
                             </figure>
                         </a>
@@ -136,7 +107,7 @@
                     <div class="post-list">
                         <a href="#">
                             <figure class="post-preview">
-                                <img src="img/images/maize-cobs.jpg" alt="">
+                                <img src="{{ url('img/images/maize-cobs.jpg') }}" alt="">
                                 <div class="post-overlay"></div>
                             </figure>
                         </a>
@@ -152,7 +123,7 @@
                     <div class="post-list">
                         <a href="#">
                             <figure class="post-preview">
-                                <img src="img/images/palm-oil.jpg" alt="">
+                                <img src="{{ url('img/images/palm-oil.jpg') }}" alt="">
                                 <div class="post-overlay"></div>
                             </figure>
                         </a>
@@ -184,7 +155,7 @@
                     <div class="row">
                         <div class="order-last order-md-4 col-lg-4 space-break">
                             <div class="product-box-img">
-                                <figure class="product-media"><img src="img/images/cassava-investment.jpg" alt=""></figure>
+                                <figure class="product-media"><img src="{{ url('img/images/cassava-investment.jpg') }}" alt=""></figure>
                             </div>
                         </div>
                         <div class="order-first order-md-8 col-lg-8">
@@ -201,7 +172,7 @@
                     <div class="row">
                         <div class="order-last order-md-4 col-lg-4 space-break">
                             <div class="product-box-img">
-                                <figure class="product-media"><img src="img/images/palm-oil.jpg" alt=""></figure>
+                                <figure class="product-media"><img src="{{ url('img/images/palm-oil.jpg') }}" alt=""></figure>
                             </div>
                         </div>
                         <div class="order-first order-md-8 col-lg-8">
@@ -234,7 +205,7 @@
                 </div>
                 <div class="col-lg-4 space-break">
                     <div class="about-col">
-                        <figure class="mission-thumb"><img src="img/images/img2.jpg" alt=""></figure>
+                        <figure class="mission-thumb"><img src="{{ url('img/images/img2.jpg') }}" alt=""></figure>
                         <div class="caption">
                             <h3>Our Mission</h3>
                             <p>Our mission is to actively contribute to the sustainable development of food production in Nigeria by reducing food imports and increasing food exports.</p>
@@ -242,8 +213,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4 space-break">
-                    <div class="about-col">
-                        <figure class="vision-thumb"><img src="img/images/img3.jpg" alt=""></figure>
+                    <div class="about-col"
+                        <figure class="vision-thumb"><img src="{{ url('img/images/cucumber.jpg') }}" alt=""></figure>
                         <div class="caption">
                             <h3>Our Vision</h3>
                             <p>Our vision is to actively actively engage Nigerian youths in embracing agriculture as a golden opportunity in the fight against poverty.</p>
@@ -253,35 +224,6 @@
             </div>
         </div>
         <!--WHY US END-->
-
-        <!--CLIENTS START-->
-{{--        <div class="container">--}}
-{{--            <div class="section-title">--}}
-{{--                <h2>Our <span>Partners</span></h2>--}}
-{{--                <p>We specialise in intelligent & effective Search and believes in the power of partnerships to grow business.</p>--}}
-{{--            </div>--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">--}}
-{{--                    <figure class="partners-logo"><img src="img/images/client-1.png" alt=""></figure>--}}
-{{--                </div>--}}
-{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">--}}
-{{--                    <figure class="partners-logo"><img src="img/images/client-5.png" alt=""></figure>--}}
-{{--                </div>--}}
-{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2 tablet-view">--}}
-{{--                    <figure class="partners-logo"><img src="img/images/client-3.png" alt=""></figure>--}}
-{{--                </div>--}}
-{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2">--}}
-{{--                    <figure class="partners-logo"><img src="img/images/client-7.png" alt=""></figure>--}}
-{{--                </div>--}}
-{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2">--}}
-{{--                    <figure class="partners-logo"><img src="img/images/client-2.png" alt=""></figure>--}}
-{{--                </div>--}}
-{{--                <div class="col-6 col-sm-6 col-md-4 col-lg-2">--}}
-{{--                    <figure class="partners-logo"><img src="img/images/client-6.png" alt=""></figure>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-        <!--CLIENTS END-->
         <!--COUNTER START-->
         <div class="container-fluid inner-color-2">
             <div class="container">
@@ -332,7 +274,7 @@
                         <p>Get In Touch</p>
                         <h2>Contact Us</h2>
                         <div class="block-address">
-                            <figure class="address-icon"><img src="img/master/map.png" alt=""></figure>
+                            <figure class="address-icon"><img src="{{ url('img/master/map.png') }}" alt=""></figure>
                             <div class="inner-info">
                                 <h4>ADDRESS</h4>
                                 <p>{!! config('app.address') !!}</p>
@@ -343,7 +285,7 @@
                             <div class="inner-info">
                                 <h4>OFFICE PHONE</h4>
                                 <p>{!! config('app.phone1') !!}</p>
-                                <p>{!! config('app.phone2') !!}</p>
+{{--                                <p>{!! config('app.phone2') !!}</p>--}}
                             </div>
                         </div>
                         <div class="block-email">
@@ -391,7 +333,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea id="form_message" name="message" class="form-control customize" placeholder="Your message" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                    <textarea id="form_message" name="message" class="form-control customize" placeholder="How did you hear about us" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -440,6 +382,40 @@
                     let response = JSON.parse(err.responseText);
                     toastr.error(response.message);
                     submitBtn.html(oldVal).prop('disabled', false);
+                }
+            })
+        });
+
+        $(document).on('submit', '#dope-contact-form-2', function(e){
+            e.preventDefault();
+
+            let form = $(this);
+            let data = form.serialize();
+            let submitBtn2 = $('#submit-btn-2');
+            let oldVal2 = submitBtn2.html();
+
+            submitBtn2.html("<span class='fa fa-spin fa-spinner'></span> Sending Message...").prop('disabled', true);
+            $.ajax({
+                url:'{{route('submit-contact-us')}}',
+                data:data,
+                type: 'POST',
+                success: function(data){
+                    if (data.success)
+                    {
+                        toastr.success('Thank you for writing to us we will get back to you as soon as possible');
+                        document.getElementById("dope-contact-form").reset();
+                    }else{
+                        toastr.error(data.message);
+                    }
+
+                    submitBtn2.html(oldVal2).prop('disabled', false);
+                    $('#default-modal').modal('hide');
+                },
+                error: function(err)
+                {
+                    let response = JSON.parse(err.responseText);
+                    toastr.error(response.message);
+                    submitBtn2.html(oldVal2).prop('disabled', false);
                 }
             })
         });

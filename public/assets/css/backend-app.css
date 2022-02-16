@@ -17,3 +17,119 @@
   position: absolute;
   width: 1px;
 }
+
+#team .card {
+  border: none;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  transform: rotateY(0deg);
+  border-radius: 0.25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  transform: rotateY(-180deg);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  height: 400px !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+}
+
+.shield-shadow {
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 8px 8px 16px #cccccc, -8px -8px 16px #ffffff;
+}
+
+.shield-back-shadow {
+  border-radius: 25px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 8px 8px 16px #cccccc, -8px -8px 16px #ffffff;
+}
+
+#team span.leading {
+  font-weight: bold !important;
+}
+
+.max-h-250 {
+  height: 250px !important;
+}
+
+.stretch-modal {
+  min-height: 100vh !important;
+  height: auto !important;
+}
+
+.box {
+  padding: 60px 0px;
+  margin-top: 50px;
+  background: #FFF;
+  text-align: center;
+}
+
+.box-title {
+  color: #428bca;
+}
+
+.box img {
+  width: 100px;
+  margin-bottom: 15px;
+}

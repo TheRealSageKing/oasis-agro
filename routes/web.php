@@ -12,6 +12,7 @@ use App\Http\Controllers\Client\DashboardController as ClientController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\InvestmentController as AdminInvestmentController;
 use App\Http\Controllers\Admin\AccountController as AdminAccountController;
+use App\Http\Controllers\Client\AccountController as ClientAccountController;
 use App\Http\Controllers\Admin\PaymentController as AdminPaymentController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\PaymentGatewayController;
@@ -77,7 +78,12 @@ Route::group(['middleware' => ['auth', 'role:Client'], 'prefix' => 'dashboard'],
 
     Route::get('/investment/create', [InvestmentController::class, 'create'])->name('client.investments.create');
     Route::post('/investment/create', [InvestmentController::class, 'store'])->name('client.investments.store');
+    Route::get('/investment/{investment}', [InvestmentController::class, 'show'])->name('client.investments.detail');
     Route::post('/investment/cancel/{id}', [InvestmentController::class, 'cancel'])->name('client.investments.cancel');
+
+    Route::post('/update', [ClientAccountController::class, 'update'])->name('client.account.update');
+    Route::post('/update-password', [ClientAccountController::class, 'updatePassword'])->name('client.account.update_password');
+
 });
 
 //Administrator

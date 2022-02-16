@@ -35,6 +35,7 @@ class DashboardController extends Controller
         })->limit(5)->orderBy('investment_id', 'desc')->get();
 
         $investments = Investment::where('is_open', 1)->where('user_id', $currentUser->id);
+        $packages = Package::where('is_active', 1)->latest()->limit(2)->get();
 
         $investmentCount = $investments->count();
 
@@ -42,7 +43,8 @@ class DashboardController extends Controller
             'portfolioSummary'=>$portfolioSummary,
             'wallet'=>$currentUser->wallet,
             'ledger'=> $currentUser->ledger,
-            'investmentCount' =>$investmentCount
+            'investmentCount' =>$investmentCount,
+            'packages' => $packages
         ]);
     }
 }

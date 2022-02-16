@@ -147,29 +147,21 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="#">
-                                        <i class="ti-settings pdd-right-10"></i>
-                                        <span>Setting</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
+                                    <a href="{{ route('client.account.index') }}">
                                         <i class="ti-user pdd-right-10"></i>
                                         <span>Profile</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="ti-email pdd-right-10"></i>
-                                        <span>Inbox</span>
-                                    </a>
-                                </li>
+
                                 <li role="separator" class="divider"></li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class="ti-power-off pdd-right-10"></i>
                                         <span>Logout</span>
                                     </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
                                 </li>
                             </ul>
                         </li>
@@ -185,7 +177,7 @@
                 </div>
                 <div class="modal slide-in-right modal-right fade" id="side-modal-r">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content">
+                        <div class="modal-content stretch-modal">
                             @yield('side-modal-content')
                         </div>
                     </div>

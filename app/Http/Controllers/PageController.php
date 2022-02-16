@@ -14,7 +14,7 @@ class PageController extends Controller
     {
         $request->validated();
         try{
-            Mail::to('hclinton007@gmail.com')->send( new ContactUsMail($request->all()));
+            Mail::to('contact@oasisagroenterprise.com')->send( new ContactUsMail($request->all()));
             return $this->successResponse('Message was sent', []);
         }catch(\Exception $ex)
         {

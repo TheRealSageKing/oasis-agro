@@ -10250,3 +10250,8 @@ button.toast-close-button {
 .card.min-500 {
   min-width: 500px !important;
 }
+
+.modal-content.bg {
+  background: url("http://oasis.test/img/images/slider-bg-2.jpg") no-repeat !important;
+  background-size: cover !important;
+}
